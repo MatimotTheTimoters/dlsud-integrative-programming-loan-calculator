@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChildFormLoader\ChildFormLoaderHelper.cs" />
     <Compile Include="FormAdminAccount.cs">
       <SubType>Form</SubType>
     </Compile>
