@@ -9,18 +9,18 @@ namespace LoanCalculator.ChildFormLoader
 {
     class ChildFormLoaderHelper
     {
-        public static void LoadChildForm(Form childForm, Form parentForm)
+        public static void LoadNewUserChildForm(Form childForm)
         {
-            foreach (Form currentForm in parentForm.MdiChildren)
+            foreach (Form currentForm in FormNewUser.ActiveForm.MdiChildren)
             {
-                if (currentForm.GetType() == parentForm.GetType())
+                if (currentForm.GetType() == childForm.GetType())
                 {
                     currentForm.Focus();
                     return;
                 }
             }
 
-            childForm.MdiParent = parentForm;
+            childForm.MdiParent = FormNewUser.ActiveForm;
             childForm.StartPosition = FormStartPosition.CenterScreen;
             childForm.Show();
         }

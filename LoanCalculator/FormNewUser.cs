@@ -16,5 +16,11 @@ namespace LoanCalculator
         {
             InitializeComponent();
         }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRegistration childForm = new FormRegistration();
+            ChildFormLoader.ChildFormLoaderHelper.LoadNewUserChildForm(childForm);
+        }
     }
 }
