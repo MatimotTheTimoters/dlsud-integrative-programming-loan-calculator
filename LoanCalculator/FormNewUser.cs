@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LoanCalculator
 {
-    public partial class Form1: Form
+    public partial class FormNewUser: Form
     {
-        public Form1()
+        public FormNewUser()
         {
             InitializeComponent();
         }

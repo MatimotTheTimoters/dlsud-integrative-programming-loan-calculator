@@ -46,14 +46,86 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormAdminAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormAdminAccount.Designer.cs">
+      <DependentUpon>FormAdminAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAllApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAllApplications.Designer.cs">
+      <DependentUpon>FormAllApplications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAllUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAllUsers.Designer.cs">
+      <DependentUpon>FormAllUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormApprovedApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormApprovedApplications.Designer.cs">
+      <DependentUpon>FormApprovedApplications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewLoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewLoan.Designer.cs">
+      <DependentUpon>FormNewLoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewUser.Designer.cs">
+      <DependentUpon>FormNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistration.Designer.cs">
+      <DependentUpon>FormRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRejectedApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRejectedApplications.Designer.cs">
+      <DependentUpon>FormRejectedApplications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserAccount.Designer.cs">
+      <DependentUpon>FormUserAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserLoanApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserLoanApplications.Designer.cs">
+      <DependentUpon>FormUserLoanApplications.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewUser.resx">
+      <DependentUpon>FormNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistration.resx">
+      <DependentUpon>FormRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserAccount.resx">
+      <DependentUpon>FormUserAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
