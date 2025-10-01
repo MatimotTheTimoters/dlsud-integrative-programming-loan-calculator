@@ -124,6 +124,9 @@
     <EmbeddedResource Include="FormAllUsers.resx">
       <DependentUpon>FormAllUsers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormApprovedApplications.resx">
+      <DependentUpon>FormApprovedApplications.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
