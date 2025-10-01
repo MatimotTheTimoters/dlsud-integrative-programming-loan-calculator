@@ -40,5 +40,21 @@ namespace LoanCalculator.ChildFormLoader
             childForm.StartPosition = FormStartPosition.CenterScreen;
             childForm.Show();
         }
+
+        public static void LoadAdminAccountChildForm(Form childForm)
+        {
+            foreach (Form currentForm in FormAdminAccount.ActiveForm.MdiChildren)
+            {
+                if (currentForm.GetType() == childForm.GetType())
+                {
+                    currentForm.Focus();
+                    return;
+                }
+            }
+
+            childForm.MdiParent = FormAdminAccount.ActiveForm;
+            childForm.StartPosition = FormStartPosition.CenterScreen;
+            childForm.Show();
+        }
     }
 }
