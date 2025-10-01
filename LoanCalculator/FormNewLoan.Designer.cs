@@ -30,36 +30,36 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblMonthsToPay = new System.Windows.Forms.Label();
+            this.lblBasicSalaryValue = new System.Windows.Forms.Label();
             this.lblBasicSalary = new System.Windows.Forms.Label();
             this.lblUserIDValue = new System.Windows.Forms.Label();
             this.lblUserID = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblBasicSalaryValue = new System.Windows.Forms.Label();
-            this.lblMonthsToPay = new System.Windows.Forms.Label();
             this.numMonthsToPay = new System.Windows.Forms.NumericUpDown();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.lblLoanAmount = new System.Windows.Forms.Label();
-            this.lblLoanAmountValue = new System.Windows.Forms.Label();
-            this.lblInterestRate = new System.Windows.Forms.Label();
-            this.lblInterestRateValue = new System.Windows.Forms.Label();
-            this.lblInterest = new System.Windows.Forms.Label();
-            this.lblInterestValue = new System.Windows.Forms.Label();
-            this.lblServiceCharge = new System.Windows.Forms.Label();
-            this.lblServiceChargeValue = new System.Windows.Forms.Label();
-            this.lblTakeHomeLoan = new System.Windows.Forms.Label();
-            this.lblTakeHomeLoanValue = new System.Windows.Forms.Label();
-            this.lblMonthlyAmortization = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblMonthlyAmortizationValue = new System.Windows.Forms.Label();
+            this.lblMonthlyAmortization = new System.Windows.Forms.Label();
+            this.lblTakeHomeLoanValue = new System.Windows.Forms.Label();
+            this.lblTakeHomeLoan = new System.Windows.Forms.Label();
+            this.lblServiceChargeValue = new System.Windows.Forms.Label();
+            this.lblServiceCharge = new System.Windows.Forms.Label();
+            this.lblInterestValue = new System.Windows.Forms.Label();
+            this.lblInterest = new System.Windows.Forms.Label();
+            this.lblInterestRateValue = new System.Windows.Forms.Label();
+            this.lblInterestRate = new System.Windows.Forms.Label();
+            this.lblLoanAmountValue = new System.Windows.Forms.Label();
+            this.lblLoanAmount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMonthsToPay)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -106,6 +106,30 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(480, 160);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // lblMonthsToPay
+            // 
+            this.lblMonthsToPay.AutoSize = true;
+            this.lblMonthsToPay.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblMonthsToPay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonthsToPay.Location = new System.Drawing.Point(26, 80);
+            this.lblMonthsToPay.Name = "lblMonthsToPay";
+            this.lblMonthsToPay.Size = new System.Drawing.Size(211, 40);
+            this.lblMonthsToPay.TabIndex = 4;
+            this.lblMonthsToPay.Text = "Number of Months to Pay:";
+            this.lblMonthsToPay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblBasicSalaryValue
+            // 
+            this.lblBasicSalaryValue.AutoSize = true;
+            this.lblBasicSalaryValue.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblBasicSalaryValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBasicSalaryValue.Location = new System.Drawing.Point(243, 40);
+            this.lblBasicSalaryValue.Name = "lblBasicSalaryValue";
+            this.lblBasicSalaryValue.Size = new System.Drawing.Size(98, 40);
+            this.lblBasicSalaryValue.TabIndex = 3;
+            this.lblBasicSalaryValue.Text = "[basicSalary]";
+            this.lblBasicSalaryValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblBasicSalary
             // 
             this.lblBasicSalary.AutoSize = true;
@@ -141,60 +165,6 @@
             this.lblUserID.TabIndex = 0;
             this.lblUserID.Text = "User ID:";
             this.lblUserID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.lblMonthlyAmortizationValue, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.lblMonthlyAmortization, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.lblTakeHomeLoanValue, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.lblTakeHomeLoan, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.lblServiceChargeValue, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.lblServiceCharge, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.lblInterestValue, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.lblInterest, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.lblInterestRateValue, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblInterestRate, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblLoanAmountValue, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblLoanAmount, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 6;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(480, 593);
-            this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // lblBasicSalaryValue
-            // 
-            this.lblBasicSalaryValue.AutoSize = true;
-            this.lblBasicSalaryValue.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblBasicSalaryValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBasicSalaryValue.Location = new System.Drawing.Point(243, 40);
-            this.lblBasicSalaryValue.Name = "lblBasicSalaryValue";
-            this.lblBasicSalaryValue.Size = new System.Drawing.Size(98, 40);
-            this.lblBasicSalaryValue.TabIndex = 3;
-            this.lblBasicSalaryValue.Text = "[basicSalary]";
-            this.lblBasicSalaryValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblMonthsToPay
-            // 
-            this.lblMonthsToPay.AutoSize = true;
-            this.lblMonthsToPay.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblMonthsToPay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonthsToPay.Location = new System.Drawing.Point(26, 80);
-            this.lblMonthsToPay.Name = "lblMonthsToPay";
-            this.lblMonthsToPay.Size = new System.Drawing.Size(211, 40);
-            this.lblMonthsToPay.TabIndex = 4;
-            this.lblMonthsToPay.Text = "Number of Months to Pay:";
-            this.lblMonthsToPay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // numMonthsToPay
             // 
@@ -241,125 +211,47 @@
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // lblLoanAmount
+            // tableLayoutPanel2
             // 
-            this.lblLoanAmount.AutoSize = true;
-            this.lblLoanAmount.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblLoanAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoanAmount.Location = new System.Drawing.Point(120, 0);
-            this.lblLoanAmount.Name = "lblLoanAmount";
-            this.lblLoanAmount.Size = new System.Drawing.Size(117, 98);
-            this.lblLoanAmount.TabIndex = 1;
-            this.lblLoanAmount.Text = "Loan Amount:";
-            this.lblLoanAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.lblMonthlyAmortizationValue, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.lblMonthlyAmortization, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.lblTakeHomeLoanValue, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.lblTakeHomeLoan, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.lblServiceChargeValue, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lblServiceCharge, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lblInterestValue, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lblInterest, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lblInterestRateValue, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblInterestRate, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblLoanAmountValue, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblLoanAmount, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 6;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(480, 593);
+            this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // lblLoanAmountValue
+            // lblMonthlyAmortizationValue
             // 
-            this.lblLoanAmountValue.AutoSize = true;
-            this.lblLoanAmountValue.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblLoanAmountValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoanAmountValue.Location = new System.Drawing.Point(243, 0);
-            this.lblLoanAmountValue.Name = "lblLoanAmountValue";
-            this.lblLoanAmountValue.Size = new System.Drawing.Size(106, 98);
-            this.lblLoanAmountValue.TabIndex = 2;
-            this.lblLoanAmountValue.Text = "[loanAmount]";
-            this.lblLoanAmountValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblInterestRate
-            // 
-            this.lblInterestRate.AutoSize = true;
-            this.lblInterestRate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblInterestRate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInterestRate.Location = new System.Drawing.Point(127, 98);
-            this.lblInterestRate.Name = "lblInterestRate";
-            this.lblInterestRate.Size = new System.Drawing.Size(110, 98);
-            this.lblInterestRate.TabIndex = 3;
-            this.lblInterestRate.Text = "Interest Rate:";
-            this.lblInterestRate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblInterestRateValue
-            // 
-            this.lblInterestRateValue.AutoSize = true;
-            this.lblInterestRateValue.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblInterestRateValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInterestRateValue.Location = new System.Drawing.Point(243, 98);
-            this.lblInterestRateValue.Name = "lblInterestRateValue";
-            this.lblInterestRateValue.Size = new System.Drawing.Size(103, 98);
-            this.lblInterestRateValue.TabIndex = 4;
-            this.lblInterestRateValue.Text = "[interestRate]";
-            this.lblInterestRateValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblInterest
-            // 
-            this.lblInterest.AutoSize = true;
-            this.lblInterest.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblInterest.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInterest.Location = new System.Drawing.Point(165, 196);
-            this.lblInterest.Name = "lblInterest";
-            this.lblInterest.Size = new System.Drawing.Size(72, 98);
-            this.lblInterest.TabIndex = 5;
-            this.lblInterest.Text = "Interest:";
-            this.lblInterest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblInterestValue
-            // 
-            this.lblInterestValue.AutoSize = true;
-            this.lblInterestValue.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblInterestValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInterestValue.Location = new System.Drawing.Point(243, 196);
-            this.lblInterestValue.Name = "lblInterestValue";
-            this.lblInterestValue.Size = new System.Drawing.Size(72, 98);
-            this.lblInterestValue.TabIndex = 6;
-            this.lblInterestValue.Text = "[interest]";
-            this.lblInterestValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblServiceCharge
-            // 
-            this.lblServiceCharge.AutoSize = true;
-            this.lblServiceCharge.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblServiceCharge.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblServiceCharge.Location = new System.Drawing.Point(109, 294);
-            this.lblServiceCharge.Name = "lblServiceCharge";
-            this.lblServiceCharge.Size = new System.Drawing.Size(128, 98);
-            this.lblServiceCharge.TabIndex = 7;
-            this.lblServiceCharge.Text = "Service Charge:";
-            this.lblServiceCharge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblServiceChargeValue
-            // 
-            this.lblServiceChargeValue.AutoSize = true;
-            this.lblServiceChargeValue.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblServiceChargeValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblServiceChargeValue.Location = new System.Drawing.Point(243, 294);
-            this.lblServiceChargeValue.Name = "lblServiceChargeValue";
-            this.lblServiceChargeValue.Size = new System.Drawing.Size(118, 98);
-            this.lblServiceChargeValue.TabIndex = 8;
-            this.lblServiceChargeValue.Text = "[serviceCharge]";
-            this.lblServiceChargeValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTakeHomeLoan
-            // 
-            this.lblTakeHomeLoan.AutoSize = true;
-            this.lblTakeHomeLoan.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblTakeHomeLoan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTakeHomeLoan.Location = new System.Drawing.Point(97, 392);
-            this.lblTakeHomeLoan.Name = "lblTakeHomeLoan";
-            this.lblTakeHomeLoan.Size = new System.Drawing.Size(140, 98);
-            this.lblTakeHomeLoan.TabIndex = 9;
-            this.lblTakeHomeLoan.Text = "Take Home Loan:";
-            this.lblTakeHomeLoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTakeHomeLoanValue
-            // 
-            this.lblTakeHomeLoanValue.AutoSize = true;
-            this.lblTakeHomeLoanValue.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblTakeHomeLoanValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTakeHomeLoanValue.Location = new System.Drawing.Point(243, 392);
-            this.lblTakeHomeLoanValue.Name = "lblTakeHomeLoanValue";
-            this.lblTakeHomeLoanValue.Size = new System.Drawing.Size(125, 98);
-            this.lblTakeHomeLoanValue.TabIndex = 10;
-            this.lblTakeHomeLoanValue.Text = "[takeHomeLoan]";
-            this.lblTakeHomeLoanValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMonthlyAmortizationValue.AutoSize = true;
+            this.lblMonthlyAmortizationValue.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblMonthlyAmortizationValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonthlyAmortizationValue.Location = new System.Drawing.Point(243, 490);
+            this.lblMonthlyAmortizationValue.Name = "lblMonthlyAmortizationValue";
+            this.lblMonthlyAmortizationValue.Size = new System.Drawing.Size(168, 103);
+            this.lblMonthlyAmortizationValue.TabIndex = 12;
+            this.lblMonthlyAmortizationValue.Text = "[monthlyAmortization]";
+            this.lblMonthlyAmortizationValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblMonthlyAmortization
             // 
@@ -373,17 +265,125 @@
             this.lblMonthlyAmortization.Text = "Monthly Amortization:";
             this.lblMonthlyAmortization.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblMonthlyAmortizationValue
+            // lblTakeHomeLoanValue
             // 
-            this.lblMonthlyAmortizationValue.AutoSize = true;
-            this.lblMonthlyAmortizationValue.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblMonthlyAmortizationValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonthlyAmortizationValue.Location = new System.Drawing.Point(243, 490);
-            this.lblMonthlyAmortizationValue.Name = "lblMonthlyAmortizationValue";
-            this.lblMonthlyAmortizationValue.Size = new System.Drawing.Size(168, 103);
-            this.lblMonthlyAmortizationValue.TabIndex = 12;
-            this.lblMonthlyAmortizationValue.Text = "[monthlyAmortization]";
-            this.lblMonthlyAmortizationValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTakeHomeLoanValue.AutoSize = true;
+            this.lblTakeHomeLoanValue.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTakeHomeLoanValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTakeHomeLoanValue.Location = new System.Drawing.Point(243, 392);
+            this.lblTakeHomeLoanValue.Name = "lblTakeHomeLoanValue";
+            this.lblTakeHomeLoanValue.Size = new System.Drawing.Size(125, 98);
+            this.lblTakeHomeLoanValue.TabIndex = 10;
+            this.lblTakeHomeLoanValue.Text = "[takeHomeLoan]";
+            this.lblTakeHomeLoanValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTakeHomeLoan
+            // 
+            this.lblTakeHomeLoan.AutoSize = true;
+            this.lblTakeHomeLoan.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblTakeHomeLoan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTakeHomeLoan.Location = new System.Drawing.Point(97, 392);
+            this.lblTakeHomeLoan.Name = "lblTakeHomeLoan";
+            this.lblTakeHomeLoan.Size = new System.Drawing.Size(140, 98);
+            this.lblTakeHomeLoan.TabIndex = 9;
+            this.lblTakeHomeLoan.Text = "Take Home Loan:";
+            this.lblTakeHomeLoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblServiceChargeValue
+            // 
+            this.lblServiceChargeValue.AutoSize = true;
+            this.lblServiceChargeValue.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblServiceChargeValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServiceChargeValue.Location = new System.Drawing.Point(243, 294);
+            this.lblServiceChargeValue.Name = "lblServiceChargeValue";
+            this.lblServiceChargeValue.Size = new System.Drawing.Size(118, 98);
+            this.lblServiceChargeValue.TabIndex = 8;
+            this.lblServiceChargeValue.Text = "[serviceCharge]";
+            this.lblServiceChargeValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblServiceCharge
+            // 
+            this.lblServiceCharge.AutoSize = true;
+            this.lblServiceCharge.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblServiceCharge.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServiceCharge.Location = new System.Drawing.Point(109, 294);
+            this.lblServiceCharge.Name = "lblServiceCharge";
+            this.lblServiceCharge.Size = new System.Drawing.Size(128, 98);
+            this.lblServiceCharge.TabIndex = 7;
+            this.lblServiceCharge.Text = "Service Charge:";
+            this.lblServiceCharge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblInterestValue
+            // 
+            this.lblInterestValue.AutoSize = true;
+            this.lblInterestValue.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblInterestValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInterestValue.Location = new System.Drawing.Point(243, 196);
+            this.lblInterestValue.Name = "lblInterestValue";
+            this.lblInterestValue.Size = new System.Drawing.Size(72, 98);
+            this.lblInterestValue.TabIndex = 6;
+            this.lblInterestValue.Text = "[interest]";
+            this.lblInterestValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblInterest
+            // 
+            this.lblInterest.AutoSize = true;
+            this.lblInterest.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblInterest.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInterest.Location = new System.Drawing.Point(165, 196);
+            this.lblInterest.Name = "lblInterest";
+            this.lblInterest.Size = new System.Drawing.Size(72, 98);
+            this.lblInterest.TabIndex = 5;
+            this.lblInterest.Text = "Interest:";
+            this.lblInterest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblInterestRateValue
+            // 
+            this.lblInterestRateValue.AutoSize = true;
+            this.lblInterestRateValue.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblInterestRateValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInterestRateValue.Location = new System.Drawing.Point(243, 98);
+            this.lblInterestRateValue.Name = "lblInterestRateValue";
+            this.lblInterestRateValue.Size = new System.Drawing.Size(103, 98);
+            this.lblInterestRateValue.TabIndex = 4;
+            this.lblInterestRateValue.Text = "[interestRate]";
+            this.lblInterestRateValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblInterestRate
+            // 
+            this.lblInterestRate.AutoSize = true;
+            this.lblInterestRate.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblInterestRate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInterestRate.Location = new System.Drawing.Point(127, 98);
+            this.lblInterestRate.Name = "lblInterestRate";
+            this.lblInterestRate.Size = new System.Drawing.Size(110, 98);
+            this.lblInterestRate.TabIndex = 3;
+            this.lblInterestRate.Text = "Interest Rate:";
+            this.lblInterestRate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLoanAmountValue
+            // 
+            this.lblLoanAmountValue.AutoSize = true;
+            this.lblLoanAmountValue.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblLoanAmountValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoanAmountValue.Location = new System.Drawing.Point(243, 0);
+            this.lblLoanAmountValue.Name = "lblLoanAmountValue";
+            this.lblLoanAmountValue.Size = new System.Drawing.Size(106, 98);
+            this.lblLoanAmountValue.TabIndex = 2;
+            this.lblLoanAmountValue.Text = "[loanAmount]";
+            this.lblLoanAmountValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLoanAmount
+            // 
+            this.lblLoanAmount.AutoSize = true;
+            this.lblLoanAmount.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblLoanAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoanAmount.Location = new System.Drawing.Point(120, 0);
+            this.lblLoanAmount.Name = "lblLoanAmount";
+            this.lblLoanAmount.Size = new System.Drawing.Size(117, 98);
+            this.lblLoanAmount.TabIndex = 1;
+            this.lblLoanAmount.Text = "Loan Amount:";
+            this.lblLoanAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormNewLoan
             // 
@@ -401,11 +401,11 @@
             this.splitContainer1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMonthsToPay)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

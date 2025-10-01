@@ -133,6 +133,9 @@
     <EmbeddedResource Include="FormUserAccount.resx">
       <DependentUpon>FormUserAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormUserLoanApplications.resx">
+      <DependentUpon>FormUserLoanApplications.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
