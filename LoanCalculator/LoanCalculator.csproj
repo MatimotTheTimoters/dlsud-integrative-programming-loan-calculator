@@ -118,6 +118,9 @@
     <EmbeddedResource Include="FormAdminAccount.resx">
       <DependentUpon>FormAdminAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAllApplications.resx">
+      <DependentUpon>FormAllApplications.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAllUsers.resx">
       <DependentUpon>FormAllUsers.cs</DependentUpon>
     </EmbeddedResource>
