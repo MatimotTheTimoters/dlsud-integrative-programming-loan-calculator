@@ -10,11 +10,23 @@ using System.Windows.Forms;
 
 namespace LoanCalculator
 {
-    public partial class formUserAccount: Form
+    public partial class FormUserAccount: Form
     {
-        public formUserAccount()
+        public FormUserAccount()
         {
             InitializeComponent();
+        }
+
+        private void newLoanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormNewLoan childForm = new FormNewLoan();
+            ChildFormLoader.ChildFormLoaderHelper.LoadUserAccountChildForm(childForm);
+        }
+
+        private void viewLoanApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUserLoanApplications childForm = new FormUserLoanApplications();
+            ChildFormLoader.ChildFormLoaderHelper.LoadUserAccountChildForm(childForm);
         }
     }
 }
