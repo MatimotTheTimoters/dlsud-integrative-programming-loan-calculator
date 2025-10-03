@@ -18,8 +18,8 @@ namespace LoanCalculator
         {
             InitializeComponent();
             currentUser = registeredUser;
-            lblUserID.Text = currentUser.UserID;
-            lblBasicSalary.Text = currentUser.BasicSalary.ToString();
+            lblUserIDValue.Text = currentUser.UserID;
+            lblBasicSalaryValue.Text = currentUser.BasicSalary.ToString();
         }
 
         public void AssignCalculationResults(decimal loanAmount, decimal interestRate, decimal interest, decimal serviceCharge, decimal takeHomeLoan, decimal monthlyAmortization)
