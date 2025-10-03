@@ -46,6 +46,18 @@ namespace LoanCalculator
             AssignCalculationResults(loanAmount, interestRate, interest, serviceCharge, takeHomeLoan, monthlyAmortization);        
         }
 
+        public void ClearInputOutput()
+        {
+            numMonthsToPay.Value = 0;
+            lblLoanAmountValue.Text = "[loanAmount]";
+            lblInterestRateValue.Text = "[interestRate]";
+            lblInterestValue.Text = "[interest]";
+            lblServiceChargeValue.Text = "[serviceCharge]";
+            lblTakeHomeLoanValue.Text = "[takeHomeLoan]";
+            lblMonthlyAmortizationValue.Text = "[monthlyAmortization]";
+            numMonthsToPay.Focus();
+        }
+
         private void btnApply_Click(object sender, EventArgs e)
         {
             String userID = currentUser.UserID;
@@ -59,6 +71,13 @@ namespace LoanCalculator
             decimal monthlyAmortization = Convert.ToDecimal(lblMonthlyAmortizationValue.Text);
 
             DataAccess.DataHelper.NewLoan(userID, basicSalary, monthsToPay, loanAmount, interestRate, interest, serviceCharge, takeHomeLoan, monthlyAmortization);
+            ClearInputOutput();
+            MessageBox.Show("Loan application submitted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearInputOutput();
         }
     }
 }
