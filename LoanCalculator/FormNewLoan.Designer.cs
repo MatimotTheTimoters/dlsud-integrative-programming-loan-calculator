@@ -52,6 +52,7 @@
             this.lblInterestRate = new System.Windows.Forms.Label();
             this.lblLoanAmountValue = new System.Windows.Forms.Label();
             this.lblLoanAmount = new System.Windows.Forms.Label();
+            this.btnApply = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -178,6 +179,7 @@
             // flowLayoutPanel1
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.flowLayoutPanel1, 2);
+            this.flowLayoutPanel1.Controls.Add(this.btnApply);
             this.flowLayoutPanel1.Controls.Add(this.btnCalculate);
             this.flowLayoutPanel1.Controls.Add(this.btnClear);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -192,19 +194,20 @@
             this.btnCalculate.AutoSize = true;
             this.btnCalculate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCalculate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculate.Location = new System.Drawing.Point(364, 3);
+            this.btnCalculate.Location = new System.Drawing.Point(290, 3);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(107, 31);
             this.btnCalculate.TabIndex = 0;
             this.btnCalculate.Text = "CALCULATE";
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // btnClear
             // 
             this.btnClear.AutoSize = true;
             this.btnClear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(290, 3);
+            this.btnClear.Location = new System.Drawing.Point(216, 3);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(68, 31);
             this.btnClear.TabIndex = 1;
@@ -385,6 +388,18 @@
             this.lblLoanAmount.Text = "Loan Amount:";
             this.lblLoanAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnApply
+            // 
+            this.btnApply.AutoSize = true;
+            this.btnApply.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnApply.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApply.Location = new System.Drawing.Point(403, 3);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(68, 31);
+            this.btnApply.TabIndex = 2;
+            this.btnApply.Text = "APPLY";
+            this.btnApply.UseVisualStyleBackColor = true;
+            // 
             // FormNewLoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -436,5 +451,6 @@
         private System.Windows.Forms.Label lblInterestRate;
         private System.Windows.Forms.Label lblLoanAmountValue;
         private System.Windows.Forms.Label lblLoanAmount;
+        private System.Windows.Forms.Button btnApply;
     }
 }

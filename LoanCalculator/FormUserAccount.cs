@@ -22,7 +22,7 @@ namespace LoanCalculator
 
         private void newLoanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormNewLoan childForm = new FormNewLoan();
+            FormNewLoan childForm = new FormNewLoan(currentUser);
             ChildFormLoader.ChildFormLoaderHelper.LoadUserAccountChildForm(childForm);
         }
 
