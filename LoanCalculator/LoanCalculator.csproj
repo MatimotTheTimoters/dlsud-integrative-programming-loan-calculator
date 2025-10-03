@@ -53,6 +53,12 @@
     <Compile Include="FormAdminAccount.Designer.cs">
       <DependentUpon>FormAdminAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAdminRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdminRegistration.Designer.cs">
+      <DependentUpon>FormAdminRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAllApplications.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAdminAccount.resx">
       <DependentUpon>FormAdminAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdminRegistration.resx">
+      <DependentUpon>FormAdminRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAllApplications.resx">
       <DependentUpon>FormAllApplications.cs</DependentUpon>
