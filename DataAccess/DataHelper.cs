@@ -53,9 +53,10 @@ namespace DataAccess
             return userExists;
         }
 
-        public static void RegisterLogin()
+        public static void RegisterLogin(String firstName, String middleInitial, String lastName)
         {
             // Check if user exists
+            bool userExists = DoesUserExist(firstName, middleInitial, lastName);
 
             // Create User object
 
