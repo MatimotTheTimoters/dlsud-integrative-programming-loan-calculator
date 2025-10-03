@@ -12,7 +12,7 @@ namespace DataAccess
 {
     public class DataHelper
     {
-        public static String conStr = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\student.ICT206-00\Source\Repos\dlsud-integrative-programming-loan-calculator\LoanCalculator\MasterFile.mdf;Integrated Security=True";
+        public static String conStr = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Matthew\Source\Repos\dlsud-integrative-programming-loan-calculator\LoanCalculator\MasterFile.mdf;Integrated Security=True";
 
         public static void RegisterUser(String firstName, String middleInitial, String lastName, Decimal basicSalary)
         {
