@@ -30,8 +30,8 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblUserID = new System.Windows.Forms.Label();
             this.lblUserIDValue = new System.Windows.Forms.Label();
+            this.lblUserID = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dataUserLoanApplications = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -77,18 +77,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(480, 70);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // lblUserID
-            // 
-            this.lblUserID.AutoSize = true;
-            this.lblUserID.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblUserID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserID.Location = new System.Drawing.Point(168, 0);
-            this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(69, 35);
-            this.lblUserID.TabIndex = 3;
-            this.lblUserID.Text = "User ID:";
-            this.lblUserID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lblUserIDValue
             // 
             this.lblUserIDValue.AutoSize = true;
@@ -100,6 +88,18 @@
             this.lblUserIDValue.TabIndex = 4;
             this.lblUserIDValue.Text = "[userID]";
             this.lblUserIDValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblUserID
+            // 
+            this.lblUserID.AutoSize = true;
+            this.lblUserID.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblUserID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserID.Location = new System.Drawing.Point(168, 0);
+            this.lblUserID.Name = "lblUserID";
+            this.lblUserID.Size = new System.Drawing.Size(69, 35);
+            this.lblUserID.TabIndex = 3;
+            this.lblUserID.Text = "User ID:";
+            this.lblUserID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnRefresh
             // 
@@ -133,7 +133,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormUserLoanApplications";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormUserLoanApplications";
+            this.Text = "My Loan Applications";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
