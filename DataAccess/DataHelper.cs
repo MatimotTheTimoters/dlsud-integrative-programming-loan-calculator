@@ -28,22 +28,42 @@ namespace DataAccess
             }
         }
 
-        public static bool DoesUserExist()
+        public static bool DoesUserExist(String firstName, String middleInitial, String lastName)
         {
+            bool userExists = false;
             using (SqlConnection con = new SqlConnection(conStr))
             {
-                SqlDataAdapter checkCmd = new SqlDataAdapter("CheckUserExistence", con);
-                checkCmd.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
-                SqlDataAdapter da = new SqlDataAdapter("DoesUserExist");
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                con.Close();
-                return dt.Rows.Count > 0;
+                SqlCommand existUserCmd = new SqlCommand("DoesUserExist", con);
+                existUserCmd.CommandType = CommandType.StoredProcedure;
+                existUserCmd.Parameters.AddWithValue("@FirstName", firstName);
+                existUserCmd.Parameters.AddWithValue("@MiddleInitial", middleInitial);
+                existUserCmd.Parameters.AddWithValue("@LastName", lastName);
+                con.Open();
+                existUserCmd.ExecuteNonQuery();
+
+                using (SqlDataReader reader = existUserCmd.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        userExists = true;
+                    }
+                }
             }
+
+            return userExists;
         }
 
-        public static void LoginUser(String firstName, String middleInitial, String lastName)
+        public static void RegisterLogin()
         {
+            // Check if user exists
+
+            // Create User object
+
+            // Pass arguments
+
+            // Return User object
         }
+
+
     }
 }
