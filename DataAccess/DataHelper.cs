@@ -40,11 +40,10 @@ namespace DataAccess
                 existUserCmd.Parameters.AddWithValue("@MiddleInitial", middleInitial);
                 existUserCmd.Parameters.AddWithValue("@LastName", lastName);
                 con.Open();
-                existUserCmd.ExecuteNonQuery();
 
                 using (SqlDataReader reader = existUserCmd.ExecuteReader())
                 {
-                    if (reader.HasRows)
+                    if (reader.Read())
                     {
                         userExists = true;
                         basicSalary = reader.GetDecimal(reader.GetOrdinal("BasicSalary"));
