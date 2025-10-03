@@ -102,9 +102,25 @@ namespace DataAccess
             monthlyAmortization = Convert.ToDecimal(takeHomeLoan / monthsToPay);
         }
 
-        public static void NewLoan()
+        public static void NewLoan(String userID, decimal basicSalary, int monthsToPay, decimal loanAmount, decimal interestRate, decimal interest,
+            decimal serviceCharge, decimal takeHomeLoan, decimal monthlyAmortization)
         {
-
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                SqlCommand newLoanCmd = new SqlCommand("NewLoan", con);
+                newLoanCmd.CommandType = CommandType.StoredProcedure;
+                newLoanCmd.Parameters.AddWithValue("@UserID", userID);
+                newLoanCmd.Parameters.AddWithValue("@BasicSalary", basicSalary);
+                newLoanCmd.Parameters.AddWithValue("@MonthsToPay", monthsToPay);
+                newLoanCmd.Parameters.AddWithValue("@LoanAmount", loanAmount);
+                newLoanCmd.Parameters.AddWithValue("@InterestRate", interestRate);
+                newLoanCmd.Parameters.AddWithValue("@Interest", interest);
+                newLoanCmd.Parameters.AddWithValue("@ServiceCharge", serviceCharge);
+                newLoanCmd.Parameters.AddWithValue("@TakeHomeLoan", takeHomeLoan);
+                newLoanCmd.Parameters.AddWithValue("@MonthlyAmortization", monthlyAmortization);
+                con.Open();
+                newLoanCmd.ExecuteNonQuery();
+            }
         }
     }
 }
