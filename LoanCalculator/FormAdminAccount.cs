@@ -17,27 +17,15 @@ namespace LoanCalculator
             InitializeComponent();
         }
 
-        private void allUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormAllUsers childForm = new FormAllUsers();
             ChildFormLoader.ChildFormLoaderHelper.LoadAdminAccountChildForm(childForm);
         }
 
-        private void allToolStripMenuItem_Click(object sender, EventArgs e)
+        private void loanApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormAllApplications childForm = new FormAllApplications();
-            ChildFormLoader.ChildFormLoaderHelper.LoadAdminAccountChildForm(childForm);
-        }
-
-        private void approvedToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormApprovedApplications childForm = new FormApprovedApplications();
-            ChildFormLoader.ChildFormLoaderHelper.LoadAdminAccountChildForm(childForm);
-        }
-
-        private void rejectedToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormRejectedApplications childForm = new FormRejectedApplications();
             ChildFormLoader.ChildFormLoaderHelper.LoadAdminAccountChildForm(childForm);
         }
     }

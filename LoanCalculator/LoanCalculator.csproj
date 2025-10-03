@@ -93,12 +93,6 @@
     <Compile Include="FormAllUsers.Designer.cs">
       <DependentUpon>FormAllUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormApprovedApplications.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormApprovedApplications.Designer.cs">
-      <DependentUpon>FormApprovedApplications.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,12 +116,6 @@
     </Compile>
     <Compile Include="FormRegistration.Designer.cs">
       <DependentUpon>FormRegistration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormRejectedApplications.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormRejectedApplications.Designer.cs">
-      <DependentUpon>FormRejectedApplications.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUserAccount.cs">
       <SubType>Form</SubType>
@@ -158,9 +146,6 @@
     <EmbeddedResource Include="FormAllUsers.resx">
       <DependentUpon>FormAllUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormApprovedApplications.resx">
-      <DependentUpon>FormApprovedApplications.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,9 +157,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistration.resx">
       <DependentUpon>FormRegistration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormRejectedApplications.resx">
-      <DependentUpon>FormRejectedApplications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUserAccount.resx">
       <DependentUpon>FormUserAccount.cs</DependentUpon>

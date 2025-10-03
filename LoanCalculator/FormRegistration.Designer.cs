@@ -67,17 +67,17 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(484, 761);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(380, 657);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // txtBasicSalary
             // 
             this.txtBasicSalary.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBasicSalary.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBasicSalary.Location = new System.Drawing.Point(124, 459);
+            this.txtBasicSalary.Location = new System.Drawing.Point(98, 396);
             this.txtBasicSalary.Multiline = true;
             this.txtBasicSalary.Name = "txtBasicSalary";
-            this.txtBasicSalary.Size = new System.Drawing.Size(357, 146);
+            this.txtBasicSalary.Size = new System.Drawing.Size(279, 125);
             this.txtBasicSalary.TabIndex = 7;
             // 
             // lblBasicSalary
@@ -85,9 +85,9 @@
             this.lblBasicSalary.AutoSize = true;
             this.lblBasicSalary.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblBasicSalary.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBasicSalary.Location = new System.Drawing.Point(3, 456);
+            this.lblBasicSalary.Location = new System.Drawing.Point(3, 393);
             this.lblBasicSalary.Name = "lblBasicSalary";
-            this.lblBasicSalary.Size = new System.Drawing.Size(115, 152);
+            this.lblBasicSalary.Size = new System.Drawing.Size(89, 131);
             this.lblBasicSalary.TabIndex = 6;
             this.lblBasicSalary.Text = "Basic Salary:";
             this.lblBasicSalary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -96,10 +96,10 @@
             // 
             this.txtLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(124, 307);
+            this.txtLastName.Location = new System.Drawing.Point(98, 265);
             this.txtLastName.Multiline = true;
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(357, 146);
+            this.txtLastName.Size = new System.Drawing.Size(279, 125);
             this.txtLastName.TabIndex = 5;
             // 
             // lblLastName
@@ -107,9 +107,9 @@
             this.lblLastName.AutoSize = true;
             this.lblLastName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblLastName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(3, 304);
+            this.lblLastName.Location = new System.Drawing.Point(3, 262);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(115, 152);
+            this.lblLastName.Size = new System.Drawing.Size(89, 131);
             this.lblLastName.TabIndex = 4;
             this.lblLastName.Text = "Last Name:";
             this.lblLastName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -118,10 +118,10 @@
             // 
             this.txtMiddleInitial.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMiddleInitial.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMiddleInitial.Location = new System.Drawing.Point(124, 155);
+            this.txtMiddleInitial.Location = new System.Drawing.Point(98, 134);
             this.txtMiddleInitial.Multiline = true;
             this.txtMiddleInitial.Name = "txtMiddleInitial";
-            this.txtMiddleInitial.Size = new System.Drawing.Size(357, 146);
+            this.txtMiddleInitial.Size = new System.Drawing.Size(279, 125);
             this.txtMiddleInitial.TabIndex = 3;
             // 
             // lblMiddleInitial
@@ -129,9 +129,9 @@
             this.lblMiddleInitial.AutoSize = true;
             this.lblMiddleInitial.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMiddleInitial.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMiddleInitial.Location = new System.Drawing.Point(3, 152);
+            this.lblMiddleInitial.Location = new System.Drawing.Point(3, 131);
             this.lblMiddleInitial.Name = "lblMiddleInitial";
-            this.lblMiddleInitial.Size = new System.Drawing.Size(115, 152);
+            this.lblMiddleInitial.Size = new System.Drawing.Size(89, 131);
             this.lblMiddleInitial.TabIndex = 2;
             this.lblMiddleInitial.Text = "Middle Initial:";
             this.lblMiddleInitial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,7 +143,7 @@
             this.lblFirstName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstName.Location = new System.Drawing.Point(3, 0);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(115, 152);
+            this.lblFirstName.Size = new System.Drawing.Size(89, 131);
             this.lblFirstName.TabIndex = 0;
             this.lblFirstName.Text = "First Name:";
             this.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -152,10 +152,10 @@
             // 
             this.txtFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(124, 3);
+            this.txtFirstName.Location = new System.Drawing.Point(98, 3);
             this.txtFirstName.Multiline = true;
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(357, 146);
+            this.txtFirstName.Size = new System.Drawing.Size(279, 125);
             this.txtFirstName.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -163,9 +163,9 @@
             this.flowLayoutPanel1.Controls.Add(this.btnRegister);
             this.flowLayoutPanel1.Controls.Add(this.btnClear);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(124, 611);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(98, 527);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(357, 147);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(279, 127);
             this.flowLayoutPanel1.TabIndex = 8;
             // 
             // btnRegister
@@ -197,12 +197,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 761);
+            this.ClientSize = new System.Drawing.Size(380, 657);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);

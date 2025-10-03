@@ -49,7 +49,7 @@
             this.dataAllApplications.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataAllApplications.Location = new System.Drawing.Point(0, 0);
             this.dataAllApplications.Name = "dataAllApplications";
-            this.dataAllApplications.Size = new System.Drawing.Size(480, 683);
+            this.dataAllApplications.Size = new System.Drawing.Size(380, 593);
             this.dataAllApplications.TabIndex = 0;
             // 
             // splitContainer1
@@ -66,8 +66,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataAllApplications);
-            this.splitContainer1.Size = new System.Drawing.Size(480, 757);
-            this.splitContainer1.SplitterDistance = 70;
+            this.splitContainer1.Size = new System.Drawing.Size(380, 657);
+            this.splitContainer1.SplitterDistance = 60;
             this.splitContainer1.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -84,7 +84,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(480, 70);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(380, 60);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lblUserIDValue
@@ -92,9 +92,9 @@
             this.lblUserIDValue.AutoSize = true;
             this.lblUserIDValue.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblUserIDValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserIDValue.Location = new System.Drawing.Point(243, 0);
+            this.lblUserIDValue.Location = new System.Drawing.Point(193, 0);
             this.lblUserIDValue.Name = "lblUserIDValue";
-            this.lblUserIDValue.Size = new System.Drawing.Size(65, 35);
+            this.lblUserIDValue.Size = new System.Drawing.Size(65, 30);
             this.lblUserIDValue.TabIndex = 4;
             this.lblUserIDValue.Text = "[userID]";
             this.lblUserIDValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -104,9 +104,9 @@
             this.lblUserID.AutoSize = true;
             this.lblUserID.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblUserID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserID.Location = new System.Drawing.Point(168, 0);
+            this.lblUserID.Location = new System.Drawing.Point(118, 0);
             this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(69, 35);
+            this.lblUserID.Size = new System.Drawing.Size(69, 30);
             this.lblUserID.TabIndex = 3;
             this.lblUserID.Text = "User ID:";
             this.lblUserID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -117,9 +117,9 @@
             this.btnRefresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(243, 38);
+            this.btnRefresh.Location = new System.Drawing.Point(193, 33);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(234, 29);
+            this.btnRefresh.Size = new System.Drawing.Size(184, 24);
             this.btnRefresh.TabIndex = 5;
             this.btnRefresh.Text = "REFRESH";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -128,12 +128,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 757);
+            this.ClientSize = new System.Drawing.Size(380, 657);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormAllApplications";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View All Loan Applications";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataAllApplications)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

@@ -31,11 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loanApplicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.approvedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rejectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,49 +56,17 @@
             // 
             // usersToolStripMenuItem
             // 
-            this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.allUsersToolStripMenuItem});
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             this.usersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usersToolStripMenuItem.Text = "Users";
-            // 
-            // allUsersToolStripMenuItem
-            // 
-            this.allUsersToolStripMenuItem.Name = "allUsersToolStripMenuItem";
-            this.allUsersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.allUsersToolStripMenuItem.Text = "All Users";
-            this.allUsersToolStripMenuItem.Click += new System.EventHandler(this.allUsersToolStripMenuItem_Click);
+            this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
             // 
             // loanApplicationsToolStripMenuItem
             // 
-            this.loanApplicationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.allToolStripMenuItem,
-            this.approvedToolStripMenuItem,
-            this.rejectedToolStripMenuItem});
             this.loanApplicationsToolStripMenuItem.Name = "loanApplicationsToolStripMenuItem";
             this.loanApplicationsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loanApplicationsToolStripMenuItem.Text = "Loan Applications";
-            // 
-            // allToolStripMenuItem
-            // 
-            this.allToolStripMenuItem.Name = "allToolStripMenuItem";
-            this.allToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.allToolStripMenuItem.Text = "All";
-            this.allToolStripMenuItem.Click += new System.EventHandler(this.allToolStripMenuItem_Click);
-            // 
-            // approvedToolStripMenuItem
-            // 
-            this.approvedToolStripMenuItem.Name = "approvedToolStripMenuItem";
-            this.approvedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.approvedToolStripMenuItem.Text = "Approved";
-            this.approvedToolStripMenuItem.Click += new System.EventHandler(this.approvedToolStripMenuItem_Click);
-            // 
-            // rejectedToolStripMenuItem
-            // 
-            this.rejectedToolStripMenuItem.Name = "rejectedToolStripMenuItem";
-            this.rejectedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.rejectedToolStripMenuItem.Text = "Rejected";
-            this.rejectedToolStripMenuItem.Click += new System.EventHandler(this.rejectedToolStripMenuItem_Click);
+            this.loanApplicationsToolStripMenuItem.Click += new System.EventHandler(this.loanApplicationsToolStripMenuItem_Click);
             // 
             // FormAdminAccount
             // 
@@ -128,10 +92,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem allUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loanApplicationsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem allToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem approvedToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rejectedToolStripMenuItem;
     }
 }
