@@ -14,6 +14,7 @@ namespace DataAccess
     {
         public static String conStr = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Matthew\Source\Repos\dlsud-integrative-programming-loan-calculator\LoanCalculator\MasterFile.mdf;Integrated Security=True";
 
+        // New User
         public static void RegisterUser(String firstName, String middleInitial, String lastName, Decimal basicSalary)
         {
             using (SqlConnection con = new SqlConnection(conStr))
@@ -76,6 +77,34 @@ namespace DataAccess
             return null;
         }
 
+        // User Account
+        public static decimal CalculateInterestRate(int monthsToPay)
+        {
+            if (monthsToPay < 1 || monthsToPay > 24)
+            {
+                throw new ArgumentOutOfRangeException("monthsToPay", "Months to pay must be between 1 and 24.");
+            }
+            decimal interestRate = (monthsToPay >= 1 && monthsToPay <= 5) ? 0.062M :
+                                   (monthsToPay >= 6 && monthsToPay <= 10) ? 0.065M :
+                                   (monthsToPay >= 11 && monthsToPay <= 15) ? 0.068M :
+                                   (monthsToPay >= 16 && monthsToPay <= 20) ? 0.075M : 0.080M;
+            return interestRate;
+        }
 
+        public static void CalculateLoan(decimal basicSalary, int monthsToPay, out decimal loanAmount, out decimal interestRate, out decimal interest,
+            out decimal serviceCharge, out decimal takeHomeLoan, out decimal monthlyAmortization)
+        {
+            loanAmount = basicSalary * 2.5M;
+            interestRate = CalculateInterestRate(monthsToPay);
+            interest = loanAmount * monthsToPay * interestRate;
+            serviceCharge = loanAmount * 0.2M;
+            takeHomeLoan = loanAmount - (interest + serviceCharge);
+            monthlyAmortization = Convert.ToDecimal(takeHomeLoan / monthsToPay);
+        }
+
+        public static void NewLoan()
+        {
+
+        }
     }
 }
