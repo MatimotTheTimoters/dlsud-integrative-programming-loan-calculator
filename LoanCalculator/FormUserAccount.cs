@@ -28,7 +28,7 @@ namespace LoanCalculator
 
         private void viewLoanApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormUserLoanApplications childForm = new FormUserLoanApplications();
+            FormUserLoanApplications childForm = new FormUserLoanApplications(currentUser);
             ChildFormLoader.ChildFormLoaderHelper.LoadUserAccountChildForm(childForm);
         }
     }

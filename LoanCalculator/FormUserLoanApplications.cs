@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,16 +13,19 @@ namespace LoanCalculator
 {
     public partial class FormUserLoanApplications: Form
     {
-        public FormUserLoanApplications()
+        User currentUser;
+        public FormUserLoanApplications(User registeredUser)
         {
             InitializeComponent();
+            currentUser = registeredUser;
             BindData();
         }
 
         public void BindData()
         {
             dataUserLoanApplications.DataSource = null;
-            DataTable userLoanApplicationsTable = DataAccess.DataHelper.GetUserLoanApplications();
+            String userID = currentUser.UserID;
+            DataTable userLoanApplicationsTable = DataAccess.DataHelper.GetUserLoanApplications(userID);
             dataUserLoanApplications.DataSource = userLoanApplicationsTable;
         }
 

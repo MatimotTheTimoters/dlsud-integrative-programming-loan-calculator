@@ -125,10 +125,11 @@ namespace DataAccess
             }
         }
 
-        public static DataTable GetUserLoanApplications()
+        public static DataTable GetUserLoanApplications(String userID)
         {
             SqlDataAdapter adapter = new SqlDataAdapter("GetUserLoanApplications", conStr);
             adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+            adapter.SelectCommand.Parameters.AddWithValue("@UserID", userID);
             DataTable userLoanApplicationsTable = new DataTable();
             adapter.Fill(userLoanApplicationsTable);
             return userLoanApplicationsTable;
