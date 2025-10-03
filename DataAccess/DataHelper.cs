@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Linq;
@@ -22,9 +23,27 @@ namespace DataAccess
                 registerCmd.Parameters.AddWithValue("@MiddleInitial", middleInitial);
                 registerCmd.Parameters.AddWithValue("@LastName", lastName);
                 registerCmd.Parameters.AddWithValue("@BasicSalary", basicSalary);
+                con.Open();
                 registerCmd.ExecuteNonQuery();
-                con.Close();
             }
+        }
+
+        public static bool DoesUserExist()
+        {
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                SqlDataAdapter checkCmd = new SqlDataAdapter("CheckUserExistence", con);
+                checkCmd.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter("DoesUserExist");
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                con.Close();
+                return dt.Rows.Count > 0;
+            }
+        }
+
+        public static void LoginUser(String firstName, String middleInitial, String lastName)
+        {
         }
     }
 }
