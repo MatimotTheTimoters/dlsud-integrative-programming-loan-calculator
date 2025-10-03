@@ -48,8 +48,8 @@
             // newLoanToolStripMenuItem
             // 
             this.newLoanToolStripMenuItem.Name = "newLoanToolStripMenuItem";
-            this.newLoanToolStripMenuItem.Size = new System.Drawing.Size(25, 20);
-            this.newLoanToolStripMenuItem.Text = " l";
+            this.newLoanToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.newLoanToolStripMenuItem.Text = "New Loan";
             this.newLoanToolStripMenuItem.Click += new System.EventHandler(this.newLoanToolStripMenuItem_Click);
             // 
             // viewLoanApplicationsToolStripMenuItem
