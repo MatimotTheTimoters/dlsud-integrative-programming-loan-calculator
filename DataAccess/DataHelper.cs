@@ -84,10 +84,12 @@ namespace DataAccess
             {
                 throw new ArgumentOutOfRangeException("monthsToPay", "Months to pay must be between 1 and 24.");
             }
-            decimal interestRate = (monthsToPay >= 1 && monthsToPay <= 5) ? 0.062M :
-                                   (monthsToPay >= 6 && monthsToPay <= 10) ? 0.065M :
-                                   (monthsToPay >= 11 && monthsToPay <= 15) ? 0.068M :
-                                   (monthsToPay >= 16 && monthsToPay <= 20) ? 0.075M : 0.080M;
+            decimal interestRate =
+                (monthsToPay >= 1 && monthsToPay <= 5) ? 0.0062M :
+                (monthsToPay >= 6 && monthsToPay <= 10) ? 0.0065M :
+                (monthsToPay >= 11 && monthsToPay <= 15) ? 0.0068M :
+                (monthsToPay >= 16 && monthsToPay <= 20) ? 0.0075M :
+                0.0080M;
             return interestRate;
         }
 

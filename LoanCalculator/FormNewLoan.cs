@@ -24,25 +24,29 @@ namespace LoanCalculator
 
         public void AssignCalculationResults(decimal loanAmount, decimal interestRate, decimal interest, decimal serviceCharge, decimal takeHomeLoan, decimal monthlyAmortization)
         {
-            lblLoanAmountValue.Text = loanAmount.ToString("C2");
-            lblInterestRateValue.Text = (interestRate * 100).ToString("F2") + "%";
-            lblInterestValue.Text = interest.ToString("C2");
-            lblServiceChargeValue.Text = serviceCharge.ToString("C2");
-            lblTakeHomeLoanValue.Text = takeHomeLoan.ToString("C2");
-            lblMonthlyAmortizationValue.Text = monthlyAmortization.ToString("C2");
+            lblLoanAmountValue.Text = loanAmount.ToString();
+            lblInterestRateValue.Text = (interestRate * 100).ToString();
+            lblInterestValue.Text = interest.ToString();
+            lblServiceChargeValue.Text = serviceCharge.ToString();
+            lblTakeHomeLoanValue.Text = takeHomeLoan.ToString();
+            lblMonthlyAmortizationValue.Text = monthlyAmortization.ToString();
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            int monthsToPay = Convert.ToInt32(numMonthsToPay.Value);
-            DataAccess.DataHelper.CalculateInterestRate(monthsToPay);
-
+            // Get input values
             decimal basicSalary = currentUser.BasicSalary;
-            decimal loanAmount, interestRate, interest, serviceCharge, takeHomeLoan, monthlyAmortization;
+            int monthsToPay = Convert.ToInt32(numMonthsToPay.Value);
+            decimal interestRate = DataAccess.DataHelper.CalculateInterestRate(monthsToPay);
 
+            // Init out values
+            decimal loanAmount, interest, serviceCharge, takeHomeLoan, monthlyAmortization;
+
+            // Calculate
             DataAccess.DataHelper.CalculateLoan(basicSalary, monthsToPay, out loanAmount, out interestRate, out interest,
                 out serviceCharge, out takeHomeLoan, out monthlyAmortization);
 
+            // Assign output
             AssignCalculationResults(loanAmount, interestRate, interest, serviceCharge, takeHomeLoan, monthlyAmortization);        
         }
 
