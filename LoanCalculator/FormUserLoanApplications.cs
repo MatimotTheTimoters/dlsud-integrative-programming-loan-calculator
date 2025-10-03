@@ -24,9 +24,12 @@ namespace LoanCalculator
         public void BindData()
         {
             dataUserLoanApplications.DataSource = null;
+
             String userID = currentUser.UserID;
-            DataTable userLoanApplicationsTable = DataAccess.DataHelper.GetUserLoanApplications(userID);
+            DataSet userLoanApplicationsTable = DataAccess.DataHelper.GetUserLoanApplications(userID);
+
             dataUserLoanApplications.DataSource = userLoanApplicationsTable;
+            dataUserLoanApplications.DataBind();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

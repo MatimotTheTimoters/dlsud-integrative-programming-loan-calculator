@@ -125,14 +125,18 @@ namespace DataAccess
             }
         }
 
-        public static DataTable GetUserLoanApplications(String userID)
+        public static DataSet GetUserLoanApplications(String userID)
         {
-            SqlDataAdapter adapter = new SqlDataAdapter("GetUserLoanApplications", conStr);
-            adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
-            adapter.SelectCommand.Parameters.AddWithValue("@UserID", userID);
-            DataTable userLoanApplicationsTable = new DataTable();
-            adapter.Fill(userLoanApplicationsTable);
-            return userLoanApplicationsTable;
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter("GetUserLoanApplications" con);
+                adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                adapter.SelectCommand.Parameters.AddWithValue("@UserID", userID);
+
+                DataSet dataSet = new DataSet();
+                adapter.Fill(dataSet);
+                return dataSet;
+            }
         }
     }
 }
