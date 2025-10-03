@@ -15,11 +15,19 @@ namespace LoanCalculator
         public FormUserLoanApplications()
         {
             InitializeComponent();
+            BindData();
+        }
+
+        public void BindData()
+        {
+            dataUserLoanApplications.DataSource = null;
+            DataTable userLoanApplicationsTable = DataAccess.DataHelper.GetUserLoanApplications();
+            dataUserLoanApplications.DataSource = userLoanApplicationsTable;
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-
+            BindData();
         }
     }
 }
