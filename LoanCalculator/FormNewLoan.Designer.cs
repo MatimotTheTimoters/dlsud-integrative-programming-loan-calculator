@@ -200,6 +200,7 @@
             this.btnApply.TabIndex = 2;
             this.btnApply.Text = "APPLY";
             this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // btnCalculate
             // 

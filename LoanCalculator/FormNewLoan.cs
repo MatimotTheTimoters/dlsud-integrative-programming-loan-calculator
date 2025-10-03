@@ -45,5 +45,20 @@ namespace LoanCalculator
 
             AssignCalculationResults(loanAmount, interestRate, interest, serviceCharge, takeHomeLoan, monthlyAmortization);        
         }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            String userID = currentUser.UserID;
+            decimal basicSalary = currentUser.BasicSalary;
+            int monthsToPay = Convert.ToInt32(numMonthsToPay.Value);
+            decimal loanAmount = Convert.ToDecimal(lblLoanAmountValue.Text);
+            decimal interestRate = Convert.ToDecimal(lblInterestRateValue.Text);
+            decimal interest = Convert.ToDecimal(lblInterestValue.Text);
+            decimal serviceCharge = Convert.ToDecimal(lblServiceChargeValue.Text);
+            decimal takeHomeLoan = Convert.ToDecimal(lblTakeHomeLoanValue.Text);
+            decimal monthlyAmortization = Convert.ToDecimal(lblMonthlyAmortizationValue.Text);
+
+            DataAccess.DataHelper.NewLoan(userID, basicSalary, monthsToPay, loanAmount, interestRate, interest, serviceCharge, takeHomeLoan, monthlyAmortization);
+        }
     }
 }
