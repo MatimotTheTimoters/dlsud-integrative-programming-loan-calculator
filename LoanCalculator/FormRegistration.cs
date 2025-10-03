@@ -16,5 +16,20 @@ namespace LoanCalculator
         {
             InitializeComponent();
         }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            // Register new user
+            String firstName = txtFirstName.Text.ToString();
+            String middleInitial = txtMiddleInitial.Text.ToString();
+            String lastName = txtLastName.Text.ToString();
+            Decimal basicSalary = Convert.ToDecimal(txtBasicSalary.Text.ToString());
+            DataAccess.DataHelper.RegisterUser(firstName, middleInitial, lastName, basicSalary);
+
+            // Open formLogin
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
+            this.Close();
+        }
     }
 }

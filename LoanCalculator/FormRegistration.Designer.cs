@@ -179,6 +179,7 @@
             this.btnRegister.TabIndex = 0;
             this.btnRegister.Text = "REGISTER";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnClear
             // 

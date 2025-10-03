@@ -65,10 +65,16 @@ namespace DataAccess
             bool userExists = DoesUserExist(firstName, middleInitial, lastName, out basicSalary);
 
             // Create User object
-            User newUser = new User(firstName, middleInitial, lastName, basicSalary);
+            if (userExists)
+            {
+                User newUser = new User(firstName, middleInitial, lastName, basicSalary);
 
-            // Return User object
-            return newUser;
+                // Return User object
+                return newUser;
+            }
+
+            // User not found
+            return null;
         }
 
 

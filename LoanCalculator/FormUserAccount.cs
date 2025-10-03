@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAccess;
 
 namespace LoanCalculator
 {
     public partial class FormUserAccount: Form
     {
-        public FormUserAccount()
+        User currentUser;
+        public FormUserAccount(User newUser)
         {
             InitializeComponent();
+            currentUser = newUser;
         }
 
         private void newLoanToolStripMenuItem_Click(object sender, EventArgs e)
