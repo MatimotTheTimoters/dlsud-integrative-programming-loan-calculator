@@ -6,6 +6,7 @@ using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess;
 
 namespace DataAccess
 {
@@ -28,7 +29,7 @@ namespace DataAccess
             }
         }
 
-        public static bool DoesUserExist(String firstName, String middleInitial, String lastName)
+        public static bool DoesUserExist(String firstName, String middleInitial, String lastName, out decimal basicSalary)
         {
             bool userExists = false;
             using (SqlConnection con = new SqlConnection(conStr))
@@ -46,23 +47,28 @@ namespace DataAccess
                     if (reader.HasRows)
                     {
                         userExists = true;
+                        basicSalary = reader.GetDecimal(reader.GetOrdinal("BasicSalary"));
+                        return userExists;
                     }
                 }
             }
 
+            // User not found
+            basicSalary = 0;
             return userExists;
         }
 
-        public static void RegisterLogin(String firstName, String middleInitial, String lastName)
+        public static User LoginUser(String firstName, String middleInitial, String lastName)
         {
             // Check if user exists
-            bool userExists = DoesUserExist(firstName, middleInitial, lastName);
+            decimal basicSalary;
+            bool userExists = DoesUserExist(firstName, middleInitial, lastName, out basicSalary);
 
             // Create User object
-
-            // Pass arguments
+            User newUser = new User(firstName, middleInitial, lastName, basicSalary);
 
             // Return User object
+            return newUser;
         }
 
 
