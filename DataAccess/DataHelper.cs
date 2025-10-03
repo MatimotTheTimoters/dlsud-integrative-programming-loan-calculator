@@ -122,5 +122,14 @@ namespace DataAccess
                 newLoanCmd.ExecuteNonQuery();
             }
         }
+
+        public static DataTable GetUserLoanApplications()
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter("GetUserLoanApplications", conStr);
+            adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable userLoanApplicationsTable = new DataTable();
+            adapter.Fill(userLoanApplicationsTable);
+            return userLoanApplicationsTable;
+        }
     }
 }
