@@ -30,16 +30,14 @@
         {
             this.dataAllUsers = new System.Windows.Forms.DataGridView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblUserIDValue = new System.Windows.Forms.Label();
-            this.lblUserID = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataAllUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataAllUsers
@@ -49,7 +47,7 @@
             this.dataAllUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataAllUsers.Location = new System.Drawing.Point(0, 0);
             this.dataAllUsers.Name = "dataAllUsers";
-            this.dataAllUsers.Size = new System.Drawing.Size(380, 593);
+            this.dataAllUsers.Size = new System.Drawing.Size(380, 620);
             this.dataAllUsers.TabIndex = 0;
             // 
             // splitContainer1
@@ -61,55 +59,23 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel1);
+            this.splitContainer1.Panel1.Controls.Add(this.flowLayoutPanel1);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataAllUsers);
             this.splitContainer1.Size = new System.Drawing.Size(380, 657);
-            this.splitContainer1.SplitterDistance = 60;
+            this.splitContainer1.SplitterDistance = 33;
             this.splitContainer1.TabIndex = 1;
             // 
-            // tableLayoutPanel1
+            // flowLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.lblUserIDValue, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblUserID, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnRefresh, 1, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(380, 60);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // lblUserIDValue
-            // 
-            this.lblUserIDValue.AutoSize = true;
-            this.lblUserIDValue.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblUserIDValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserIDValue.Location = new System.Drawing.Point(193, 0);
-            this.lblUserIDValue.Name = "lblUserIDValue";
-            this.lblUserIDValue.Size = new System.Drawing.Size(65, 30);
-            this.lblUserIDValue.TabIndex = 4;
-            this.lblUserIDValue.Text = "[userID]";
-            this.lblUserIDValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblUserID
-            // 
-            this.lblUserID.AutoSize = true;
-            this.lblUserID.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblUserID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserID.Location = new System.Drawing.Point(118, 0);
-            this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(69, 30);
-            this.lblUserID.TabIndex = 3;
-            this.lblUserID.Text = "User ID:";
-            this.lblUserID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.flowLayoutPanel1.Controls.Add(this.btnRefresh);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(380, 33);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnRefresh
             // 
@@ -117,13 +83,13 @@
             this.btnRefresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnRefresh.Location = new System.Drawing.Point(193, 33);
+            this.btnRefresh.Location = new System.Drawing.Point(3, 3);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(184, 24);
-            this.btnRefresh.TabIndex = 5;
+            this.btnRefresh.Size = new System.Drawing.Size(77, 29);
+            this.btnRefresh.TabIndex = 6;
             this.btnRefresh.Text = "REFRESH";
             this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click_1);
             // 
             // FormAllUsers
             // 
@@ -141,8 +107,8 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -151,9 +117,7 @@
 
         private System.Windows.Forms.DataGridView dataAllUsers;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label lblUserIDValue;
-        private System.Windows.Forms.Label lblUserID;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnRefresh;
     }
 }

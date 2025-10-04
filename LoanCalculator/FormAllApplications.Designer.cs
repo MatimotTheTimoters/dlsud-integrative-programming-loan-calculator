@@ -31,22 +31,20 @@
             this.dataAllApplications = new System.Windows.Forms.DataGridView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblSelectedLoanApplication = new System.Windows.Forms.Label();
-            this.lblAdminUserIDValue = new System.Windows.Forms.Label();
-            this.lblUserID = new System.Windows.Forms.Label();
+            this.dataAllLoanSelectedRow = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAccept = new System.Windows.Forms.Button();
             this.btnReject = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.dataAllLoanSelectedRow = new System.Windows.Forms.DataGridView();
+            this.lblSelectedLoanApplication = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataAllApplications)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataAllLoanSelectedRow)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataAllApplications
@@ -81,58 +79,29 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.Controls.Add(this.dataAllLoanSelectedRow, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblSelectedLoanApplication, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblAdminUserIDValue, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblUserID, 0, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.Controls.Add(this.dataAllLoanSelectedRow, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblSelectedLoanApplication, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(380, 179);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // lblSelectedLoanApplication
+            // dataAllLoanSelectedRow
             // 
-            this.lblSelectedLoanApplication.AutoSize = true;
-            this.lblSelectedLoanApplication.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblSelectedLoanApplication.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedLoanApplication.Location = new System.Drawing.Point(33, 59);
-            this.lblSelectedLoanApplication.Name = "lblSelectedLoanApplication";
-            this.lblSelectedLoanApplication.Size = new System.Drawing.Size(116, 59);
-            this.lblSelectedLoanApplication.TabIndex = 7;
-            this.lblSelectedLoanApplication.Text = "Selected Loan Application:";
-            this.lblSelectedLoanApplication.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblAdminUserIDValue
-            // 
-            this.lblAdminUserIDValue.AutoSize = true;
-            this.lblAdminUserIDValue.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblAdminUserIDValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminUserIDValue.Location = new System.Drawing.Point(155, 0);
-            this.lblAdminUserIDValue.Name = "lblAdminUserIDValue";
-            this.lblAdminUserIDValue.Size = new System.Drawing.Size(111, 59);
-            this.lblAdminUserIDValue.TabIndex = 4;
-            this.lblAdminUserIDValue.Text = "[adminUserID]";
-            this.lblAdminUserIDValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblUserID
-            // 
-            this.lblUserID.AutoSize = true;
-            this.lblUserID.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblUserID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserID.Location = new System.Drawing.Point(25, 0);
-            this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(124, 59);
-            this.lblUserID.TabIndex = 3;
-            this.lblUserID.Text = "Admin User ID:";
-            this.lblUserID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dataAllLoanSelectedRow.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataAllLoanSelectedRow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataAllLoanSelectedRow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataAllLoanSelectedRow.Location = new System.Drawing.Point(117, 3);
+            this.dataAllLoanSelectedRow.Name = "dataAllLoanSelectedRow";
+            this.dataAllLoanSelectedRow.Size = new System.Drawing.Size(260, 128);
+            this.dataAllLoanSelectedRow.TabIndex = 10;
             // 
             // flowLayoutPanel1
             // 
@@ -141,9 +110,10 @@
             this.flowLayoutPanel1.Controls.Add(this.btnReject);
             this.flowLayoutPanel1.Controls.Add(this.btnRefresh);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 121);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 137);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(374, 55);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(374, 39);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // btnAccept
@@ -152,7 +122,7 @@
             this.btnAccept.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAccept.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnAccept.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnAccept.Location = new System.Drawing.Point(3, 3);
+            this.btnAccept.Location = new System.Drawing.Point(300, 3);
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(71, 29);
             this.btnAccept.TabIndex = 8;
@@ -166,7 +136,7 @@
             this.btnReject.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnReject.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnReject.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnReject.Location = new System.Drawing.Point(80, 3);
+            this.btnReject.Location = new System.Drawing.Point(229, 3);
             this.btnReject.Name = "btnReject";
             this.btnReject.Size = new System.Drawing.Size(65, 29);
             this.btnReject.TabIndex = 9;
@@ -180,7 +150,7 @@
             this.btnRefresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnRefresh.Location = new System.Drawing.Point(151, 3);
+            this.btnRefresh.Location = new System.Drawing.Point(146, 3);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(77, 29);
             this.btnRefresh.TabIndex = 10;
@@ -188,15 +158,17 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // dataAllLoanSelectedRow
+            // lblSelectedLoanApplication
             // 
-            this.dataAllLoanSelectedRow.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataAllLoanSelectedRow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataAllLoanSelectedRow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataAllLoanSelectedRow.Location = new System.Drawing.Point(155, 62);
-            this.dataAllLoanSelectedRow.Name = "dataAllLoanSelectedRow";
-            this.dataAllLoanSelectedRow.Size = new System.Drawing.Size(222, 53);
-            this.dataAllLoanSelectedRow.TabIndex = 10;
+            this.lblSelectedLoanApplication.AutoSize = true;
+            this.lblSelectedLoanApplication.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblSelectedLoanApplication.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectedLoanApplication.Location = new System.Drawing.Point(8, 0);
+            this.lblSelectedLoanApplication.Name = "lblSelectedLoanApplication";
+            this.lblSelectedLoanApplication.Size = new System.Drawing.Size(103, 134);
+            this.lblSelectedLoanApplication.TabIndex = 7;
+            this.lblSelectedLoanApplication.Text = "Selected Loan Application:";
+            this.lblSelectedLoanApplication.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormAllApplications
             // 
@@ -216,9 +188,9 @@
             this.splitContainer1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataAllLoanSelectedRow)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataAllLoanSelectedRow)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -228,8 +200,6 @@
         private System.Windows.Forms.DataGridView dataAllApplications;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label lblAdminUserIDValue;
-        private System.Windows.Forms.Label lblUserID;
         private System.Windows.Forms.Label lblSelectedLoanApplication;
         private System.Windows.Forms.DataGridView dataAllLoanSelectedRow;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

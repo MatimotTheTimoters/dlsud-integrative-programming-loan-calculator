@@ -19,7 +19,6 @@ namespace LoanCalculator
         {
             InitializeComponent();
             currentAdminUser = registeredAdminUser;
-            lblUserIDValue.Text = currentAdminUser.AdminUserID;
             BindData();
         }
 
@@ -33,6 +32,11 @@ namespace LoanCalculator
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             BindData();
+        }
+
+        private void btnRefresh_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
