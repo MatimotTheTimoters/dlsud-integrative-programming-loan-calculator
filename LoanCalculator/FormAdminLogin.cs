@@ -36,5 +36,13 @@ namespace LoanCalculator
                 MessageBox.Show("Invalid credentials. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtFirstName.Clear();
+            txtMiddleInitial.Clear();
+            txtLastName.Clear();
+            txtAdminKey.Clear();
+        }
     }
 }
