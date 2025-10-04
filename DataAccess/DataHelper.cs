@@ -23,7 +23,7 @@ namespace DataAccess
         {
             using (SqlConnection con = new SqlConnection(conStr))
             {
-                SqlCommand registerCmd = new SqlCommand("UserRegister", con);
+                SqlCommand registerCmd = new SqlCommand("AddNewUser", con);
                 registerCmd.CommandType = System.Data.CommandType.StoredProcedure;
                 registerCmd.Parameters.AddWithValue("@FirstName", firstName);
                 registerCmd.Parameters.AddWithValue("@MiddleInitial", middleInitial);
@@ -34,57 +34,27 @@ namespace DataAccess
             }
         }
 
-        public static bool DoesUserExist(
-            String firstName, 
-            String middleInitial, 
-            String lastName, 
-            out decimal basicSalary)
+        public static User LoginUser(string firstName, string middleInitial, string lastName)
         {
-            bool userExists = false;
-            using (SqlConnection con = new SqlConnection(conStr))
+            using (var conn = new SqlConnection(conStr))
+            using (var cmd = new SqlCommand("GetUserByFullName", conn))
             {
-                SqlCommand existUserCmd = new SqlCommand("DoesUserExist", con);
-                existUserCmd.CommandType = CommandType.StoredProcedure;
-                existUserCmd.Parameters.AddWithValue("@FirstName", firstName);
-                existUserCmd.Parameters.AddWithValue("@MiddleInitial", middleInitial);
-                existUserCmd.Parameters.AddWithValue("@LastName", lastName);
-                con.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@FirstName", firstName);
+                cmd.Parameters.AddWithValue("@MiddleInitial", middleInitial);
+                cmd.Parameters.AddWithValue("@LastName", lastName);
 
-                using (SqlDataReader reader = existUserCmd.ExecuteReader())
+                conn.Open();
+                using (var reader = cmd.ExecuteReader(CommandBehavior.SingleRow))
                 {
                     if (reader.Read())
                     {
-                        userExists = true;
-                        basicSalary = reader.GetDecimal(reader.GetOrdinal("BasicSalary"));
-                        return userExists;
+                        decimal basicSalary = reader.GetDecimal(reader.GetOrdinal("BasicSalary"));
+                        return new User(firstName, middleInitial, lastName, basicSalary);
                     }
                 }
             }
 
-            // User not found
-            basicSalary = 0;
-            return userExists;
-        }
-
-        public static User LoginUser(
-            String firstName, 
-            String middleInitial, 
-            String lastName)
-        {
-            // Check if user exists
-            decimal basicSalary;
-            bool userExists = DoesUserExist(firstName, middleInitial, lastName, out basicSalary);
-
-            // Create User object
-            if (userExists)
-            {
-                User newUser = new User(firstName, middleInitial, lastName, basicSalary);
-
-                // Return User object
-                return newUser;
-            }
-
-            // User not found
             return null;
         }
 
@@ -135,7 +105,7 @@ namespace DataAccess
         {
             using (SqlConnection con = new SqlConnection(conStr))
             {
-                SqlCommand newLoanCmd = new SqlCommand("NewLoan", con);
+                SqlCommand newLoanCmd = new SqlCommand("AddNewLoan", con);
                 newLoanCmd.CommandType = CommandType.StoredProcedure;
                 newLoanCmd.Parameters.AddWithValue("@UserID", userID);
                 newLoanCmd.Parameters.AddWithValue("@BasicSalary", basicSalary);
@@ -163,6 +133,6 @@ namespace DataAccess
         }
 
         // Admin Account
-
+        
     }
 }
