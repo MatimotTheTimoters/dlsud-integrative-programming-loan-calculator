@@ -84,6 +84,7 @@ namespace LoanCalculator
                 // Display MessageBox
                 MessageBox.Show("Loan has been accepted successfully.", "Success",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BindData();
             }
             catch (Exception ex)
             {
@@ -117,6 +118,7 @@ namespace LoanCalculator
                 // Display MessageBox
                 MessageBox.Show("Loan has been rejected successfully.", "Success",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BindData();
             }
             catch (Exception ex)
             {
