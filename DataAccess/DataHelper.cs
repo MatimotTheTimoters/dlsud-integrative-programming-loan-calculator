@@ -15,7 +15,11 @@ namespace DataAccess
         public static String conStr = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Matthew\Source\Repos\dlsud-integrative-programming-loan-calculator\LoanCalculator\MasterFile.mdf;Integrated Security=True";
 
         // New User
-        public static void RegisterUser(String firstName, String middleInitial, String lastName, Decimal basicSalary)
+        public static void RegisterUser(
+            String firstName, 
+            String middleInitial, 
+            String lastName, 
+            Decimal basicSalary)
         {
             using (SqlConnection con = new SqlConnection(conStr))
             {
@@ -30,7 +34,11 @@ namespace DataAccess
             }
         }
 
-        public static bool DoesUserExist(String firstName, String middleInitial, String lastName, out decimal basicSalary)
+        public static bool DoesUserExist(
+            String firstName, 
+            String middleInitial, 
+            String lastName, 
+            out decimal basicSalary)
         {
             bool userExists = false;
             using (SqlConnection con = new SqlConnection(conStr))
@@ -58,7 +66,10 @@ namespace DataAccess
             return userExists;
         }
 
-        public static User LoginUser(String firstName, String middleInitial, String lastName)
+        public static User LoginUser(
+            String firstName, 
+            String middleInitial, 
+            String lastName)
         {
             // Check if user exists
             decimal basicSalary;
@@ -93,8 +104,15 @@ namespace DataAccess
             return interestRate;
         }
 
-        public static void CalculateLoan(decimal basicSalary, int monthsToPay, out decimal loanAmount, out decimal interestRate, out decimal interest,
-            out decimal serviceCharge, out decimal takeHomeLoan, out decimal monthlyAmortization)
+        public static void CalculateLoan(
+            decimal basicSalary, 
+            int monthsToPay, 
+            out decimal loanAmount, 
+            out decimal interestRate, 
+            out decimal interest,
+            out decimal serviceCharge, 
+            out decimal takeHomeLoan, 
+            out decimal monthlyAmortization)
         {
             loanAmount = basicSalary * 2.5M;
             interestRate = CalculateInterestRate(monthsToPay);
@@ -104,8 +122,16 @@ namespace DataAccess
             monthlyAmortization = Convert.ToDecimal(takeHomeLoan / monthsToPay);
         }
 
-        public static void NewLoan(String userID, decimal basicSalary, int monthsToPay, decimal loanAmount, decimal interestRate, decimal interest,
-            decimal serviceCharge, decimal takeHomeLoan, decimal monthlyAmortization)
+        public static void NewLoan(
+            String userID, 
+            decimal basicSalary, 
+            int monthsToPay, 
+            decimal loanAmount, 
+            decimal interestRate, 
+            decimal interest,
+            decimal serviceCharge, 
+            decimal takeHomeLoan, 
+            decimal monthlyAmortization)
         {
             using (SqlConnection con = new SqlConnection(conStr))
             {

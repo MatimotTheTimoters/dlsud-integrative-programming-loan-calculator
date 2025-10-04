@@ -22,7 +22,13 @@ namespace LoanCalculator
             lblBasicSalaryValue.Text = currentUser.BasicSalary.ToString();
         }
 
-        public void AssignCalculationResults(decimal loanAmount, decimal interestRate, decimal interest, decimal serviceCharge, decimal takeHomeLoan, decimal monthlyAmortization)
+        public void AssignCalculationResults(
+            decimal loanAmount, 
+            decimal interestRate, 
+            decimal interest, 
+            decimal serviceCharge, 
+            decimal takeHomeLoan, 
+            decimal monthlyAmortization)
         {
             lblLoanAmountValue.Text = loanAmount.ToString();
             lblInterestRateValue.Text = (interestRate * 100).ToString();
@@ -43,11 +49,24 @@ namespace LoanCalculator
             decimal loanAmount, interest, serviceCharge, takeHomeLoan, monthlyAmortization;
 
             // Calculate
-            DataAccess.DataHelper.CalculateLoan(basicSalary, monthsToPay, out loanAmount, out interestRate, out interest,
-                out serviceCharge, out takeHomeLoan, out monthlyAmortization);
+            DataAccess.DataHelper.CalculateLoan(
+                basicSalary, 
+                monthsToPay, 
+                out loanAmount, 
+                out interestRate, 
+                out interest,
+                out serviceCharge, 
+                out takeHomeLoan, 
+                out monthlyAmortization);
 
             // Assign output
-            AssignCalculationResults(loanAmount, interestRate, interest, serviceCharge, takeHomeLoan, monthlyAmortization);        
+            AssignCalculationResults(
+                loanAmount, 
+                interestRate, 
+                interest, 
+                serviceCharge, 
+                takeHomeLoan, 
+                monthlyAmortization);        
         }
 
         public void ClearInputOutput()
@@ -74,7 +93,16 @@ namespace LoanCalculator
             decimal takeHomeLoan = Convert.ToDecimal(lblTakeHomeLoanValue.Text);
             decimal monthlyAmortization = Convert.ToDecimal(lblMonthlyAmortizationValue.Text);
 
-            DataAccess.DataHelper.NewLoan(userID, basicSalary, monthsToPay, loanAmount, interestRate, interest, serviceCharge, takeHomeLoan, monthlyAmortization);
+            DataAccess.DataHelper.NewLoan(
+                userID, 
+                basicSalary, 
+                monthsToPay, 
+                loanAmount, 
+                interestRate, 
+                interest, 
+                serviceCharge, 
+                takeHomeLoan, 
+                monthlyAmortization);
             ClearInputOutput();
             MessageBox.Show("Loan application submitted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
