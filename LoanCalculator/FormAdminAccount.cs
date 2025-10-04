@@ -13,9 +13,9 @@ namespace LoanCalculator
 {
     public partial class FormAdminAccount: Form
     {
-        User currentAdminUser;
+        AdminUser currentAdminUser;
 
-        public FormAdminAccount(User newAdminUser)
+        public FormAdminAccount(AdminUser newAdminUser)
         {
             InitializeComponent();
             currentAdminUser = newAdminUser;
@@ -29,7 +29,7 @@ namespace LoanCalculator
 
         private void loanApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormAllApplications childForm = new FormAllApplications();
+            FormAllApplications childForm = new FormAllApplications(currentAdminUser);
             ChildFormLoader.ChildFormLoaderHelper.LoadAdminAccountChildForm(childForm);
         }
     }

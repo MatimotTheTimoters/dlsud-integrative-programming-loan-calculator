@@ -54,23 +54,20 @@ namespace DataAccess
             return null;
         }
 
-        public static User AdminUserLogin(String firstName, String middleInitial, String lastName, String adminKey)
+        public static AdminUser AdminUserLogin(String firstName, String middleInitial, String lastName, String adminKey)
         {
             using (var conn = new SqlConnection(conStr))
-            using (var cmd = new SqlCommand("GetUserByFullName", conn))
+            using (var cmd = new SqlCommand("GetAdminUserByKey", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@FirstName", firstName);
-                cmd.Parameters.AddWithValue("@MiddleInitial", middleInitial);
-                cmd.Parameters.AddWithValue("@LastName", lastName);
+                cmd.Parameters.AddWithValue("@AdminKey", adminKey);
 
                 conn.Open();
                 using (var reader = cmd.ExecuteReader(CommandBehavior.SingleRow))
                 {
                     if (reader.Read())
                     {
-                        decimal basicSalary = reader.GetDecimal(reader.GetOrdinal("BasicSalary"));
-                        return new User(firstName, middleInitial, lastName, basicSalary);
+                        return new AdminUser(firstName, middleInitial, lastName, adminKey);
                     }
                 }
             }
@@ -181,6 +178,15 @@ namespace DataAccess
                 con.Open();
                 rejectLoanCmd.ExecuteNonQuery();
             }
+        }
+
+        public static DataTable GetAllLoanApplications()
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter("GetAllLoanApplications", conStr);
+            adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
         }
     }
 }

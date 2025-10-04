@@ -24,7 +24,7 @@ namespace LoanCalculator
             String middleInitial = txtMiddleInitial.Text;
             String lastName = txtLastName.Text;
             String adminKey = txtAdminKey.Text;
-            User newAdminUser = DataHelper.AdminUserLogin(firstName, middleInitial, lastName, adminKey);
+            AdminUser newAdminUser = DataHelper.AdminUserLogin(firstName, middleInitial, lastName, adminKey);
             if (newAdminUser != null)
             {
                 FormAdminAccount adminAccount = new FormAdminAccount(newAdminUser);

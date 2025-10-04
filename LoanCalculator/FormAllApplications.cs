@@ -20,6 +20,13 @@ namespace LoanCalculator
             InitializeComponent();
             currentAdminUser = registeredAdminUser;
             lblAdminUserIDValue.Text = currentAdminUser.AdminUserID;
+            BindData();
+        }
+
+        public void BindData()
+        {
+            DataTable allLoanApplicationsTable = DataHelper.GetAllLoanApplications();
+            dataAllApplications.DataSource = allLoanApplicationsTable;
         }
 
         private void dataAllApplications_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -114,6 +121,12 @@ namespace LoanCalculator
                 MessageBox.Show("An error occurred: " + ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            dataAllApplications.Refresh();
+            dataAllLoanSelectedRow.Refresh();
         }
     }
 }
