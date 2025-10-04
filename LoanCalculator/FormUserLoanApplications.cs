@@ -17,19 +17,17 @@ namespace LoanCalculator
         public FormUserLoanApplications(User registeredUser)
         {
             InitializeComponent();
-
             currentUser = registeredUser;
-
-            String userID = currentUser.UserID;
-            lblUserIDValue.Text = userID;
-
-            BindData(userID);
+            lblUserIDValue.Text = currentUser.UserID;
+            BindData();
         }
 
-        public void BindData(String userID)
+        public void BindData()
         {
-            DataTable userLoanApplicationsTable = DataAccess.DataHelper.GetUserLoanApplications(userID);
+            dataUserLoanApplications.DataSource = null;
 
+            String userID = currentUser.UserID;
+            DataTable userLoanApplicationsTable = DataHelper.GetUserLoanApplications(userID);
             dataUserLoanApplications.DataSource = userLoanApplicationsTable;
         }
 

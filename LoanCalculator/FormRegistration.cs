@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAccess;
 
 namespace LoanCalculator
 {
@@ -24,7 +25,10 @@ namespace LoanCalculator
             String middleInitial = txtMiddleInitial.Text.ToString();
             String lastName = txtLastName.Text.ToString();
             Decimal basicSalary = Convert.ToDecimal(txtBasicSalary.Text.ToString());
-            DataAccess.DataHelper.RegisterUser(firstName, middleInitial, lastName, basicSalary);
+            User newUser = new User(firstName, middleInitial, lastName, basicSalary);
+            String userID = newUser.UserID;
+
+            DataAccess.DataHelper.RegisterUser(userID, firstName, middleInitial, lastName, basicSalary);
 
             // Open formLogin
             FormLogin formLogin = new FormLogin();

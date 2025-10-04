@@ -15,12 +15,13 @@ namespace DataAccess
         public static String conStr = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Matthew\Source\Repos\dlsud-integrative-programming-loan-calculator\LoanCalculator\MasterFile.mdf;Integrated Security=True";
 
         // New User
-        public static void RegisterUser(String firstName, String middleInitial, String lastName, Decimal basicSalary)
+        public static void RegisterUser(String userID, String firstName, String middleInitial, String lastName, Decimal basicSalary)
         {
             using (SqlConnection con = new SqlConnection(conStr))
             {
                 SqlCommand registerCmd = new SqlCommand("AddNewUser", con);
                 registerCmd.CommandType = System.Data.CommandType.StoredProcedure;
+                registerCmd.Parameters.AddWithValue("@UserID", userID);
                 registerCmd.Parameters.AddWithValue("@FirstName", firstName);
                 registerCmd.Parameters.AddWithValue("@MiddleInitial", middleInitial);
                 registerCmd.Parameters.AddWithValue("@LastName", lastName);
@@ -143,7 +144,6 @@ namespace DataAccess
             SqlDataAdapter adapter = new SqlDataAdapter("GetUserLoanApplications", conStr);
             adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
             adapter.SelectCommand.Parameters.AddWithValue("@UserID", userID);
-
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             return dt;
