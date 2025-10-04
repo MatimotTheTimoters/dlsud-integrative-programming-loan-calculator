@@ -123,6 +123,7 @@
             this.btnRefresh.TabIndex = 5;
             this.btnRefresh.Text = "REFRESH";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // FormAllUsers
             // 

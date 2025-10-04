@@ -25,6 +25,9 @@ namespace LoanCalculator
 
         public void BindData()
         {
+            dataAllApplications.DataSource = null;
+            dataAllLoanSelectedRow.DataSource = null;
+
             DataTable allLoanApplicationsTable = DataHelper.GetAllLoanApplications();
             dataAllApplications.DataSource = allLoanApplicationsTable;
         }
@@ -125,8 +128,7 @@ namespace LoanCalculator
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            dataAllApplications.Refresh();
-            dataAllLoanSelectedRow.Refresh();
+            BindData();
         }
     }
 }

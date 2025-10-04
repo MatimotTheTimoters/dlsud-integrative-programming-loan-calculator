@@ -188,5 +188,14 @@ namespace DataAccess
             adapter.Fill(dt);
             return dt;
         }
+
+        public static DataTable GetAllUsers()
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter("GetAllUsers", conStr);
+            adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
+        }
     }
 }

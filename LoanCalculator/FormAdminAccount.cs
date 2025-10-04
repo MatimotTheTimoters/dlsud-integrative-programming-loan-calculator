@@ -23,7 +23,7 @@ namespace LoanCalculator
 
         private void usersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormAllUsers childForm = new FormAllUsers();
+            FormAllUsers childForm = new FormAllUsers(currentAdminUser);
             ChildFormLoader.ChildFormLoaderHelper.LoadAdminAccountChildForm(childForm);
         }
 
