@@ -38,5 +38,12 @@ namespace LoanCalculator
                 MessageBox.Show("User not found. Please register first.");
             }
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtFirstName.Text = "";
+            txtMiddleInitial.Text = "";
+            txtLastName.Text = "";
+        }
     }
 }

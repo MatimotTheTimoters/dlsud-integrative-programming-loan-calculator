@@ -35,5 +35,13 @@ namespace LoanCalculator
             formLogin.Show();
             this.Close();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtFirstName.Text = "";
+            txtMiddleInitial.Text = "";
+            txtLastName.Text = "";
+            txtBasicSalary.Text = "";
+        }
     }
 }
