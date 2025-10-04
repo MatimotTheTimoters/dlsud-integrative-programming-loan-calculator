@@ -31,8 +31,7 @@ namespace LoanCalculator
             DataAccess.DataHelper.RegisterUser(userID, firstName, middleInitial, lastName, basicSalary);
 
             // Open formLogin
-            FormLogin formLogin = new FormLogin();
-            formLogin.Show();
+            MessageBox.Show("Account successfuly created! Your User ID is: " + userID, "Registration Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
 

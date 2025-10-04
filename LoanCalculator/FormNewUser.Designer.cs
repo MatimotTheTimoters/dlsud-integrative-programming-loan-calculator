@@ -29,44 +29,44 @@
         private void InitializeComponent()
         {
             this.menuStripNewUser = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loginMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adminMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripNewUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripNewUser
             // 
             this.menuStripNewUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.loginToolStripMenuItem,
-            this.adminToolStripMenuItem});
+            this.registerMenuItem,
+            this.loginMenuItem,
+            this.adminMenuItem});
             this.menuStripNewUser.Location = new System.Drawing.Point(0, 0);
             this.menuStripNewUser.Name = "menuStripNewUser";
             this.menuStripNewUser.Size = new System.Drawing.Size(884, 24);
             this.menuStripNewUser.TabIndex = 1;
             this.menuStripNewUser.Text = "menuStrip1";
             // 
-            // fileToolStripMenuItem
+            // registerMenuItem
             // 
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.fileToolStripMenuItem.Text = "Register";
-            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
+            this.registerMenuItem.Name = "registerMenuItem";
+            this.registerMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.registerMenuItem.Text = "Register";
+            this.registerMenuItem.Click += new System.EventHandler(this.registerMenuItem_Click);
             // 
-            // loginToolStripMenuItem
+            // loginMenuItem
             // 
-            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.loginToolStripMenuItem.Text = "Login";
-            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
+            this.loginMenuItem.Name = "loginMenuItem";
+            this.loginMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.loginMenuItem.Text = "Login";
+            this.loginMenuItem.Click += new System.EventHandler(this.loginMenuItem_Click);
             // 
-            // adminToolStripMenuItem
+            // adminMenuItem
             // 
-            this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
-            this.adminToolStripMenuItem.Text = "Admin Login";
-            this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
+            this.adminMenuItem.Name = "adminMenuItem";
+            this.adminMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.adminMenuItem.Text = "Admin Login";
+            this.adminMenuItem.Click += new System.EventHandler(this.adminMenuItem_Click);
             // 
             // FormNewUser
             // 
@@ -90,9 +90,9 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStripNewUser;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loginMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adminMenuItem;
     }
 }
 

@@ -13,9 +13,12 @@ namespace LoanCalculator
 {
     public partial class FormLogin: Form
     {
-        public FormLogin()
+        User currentUser;
+
+        public FormLogin(User registeredUser)
         {
             InitializeComponent();
+            currentUser = registeredUser;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -29,9 +32,9 @@ namespace LoanCalculator
             if (newUser != null)
             {
                 // Go to FormUserAccount
-                FormUserAccount formMain = new FormUserAccount(newUser);
-                formMain.Show();
-                this.Hide();
+                FormUserAccount formUserAccount = new FormUserAccount(newUser);
+                formUserAccount.Show();
+                this.Close();
             }
             else
             {
