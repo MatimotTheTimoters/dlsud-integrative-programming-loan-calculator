@@ -32,14 +32,16 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblUserIDValue = new System.Windows.Forms.Label();
             this.lblUserID = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.dataUserLoanApplications = new System.Windows.Forms.DataGridView();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataUserLoanApplications)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -56,25 +58,25 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataUserLoanApplications);
-            this.splitContainer1.Size = new System.Drawing.Size(380, 657);
-            this.splitContainer1.SplitterDistance = 60;
+            this.splitContainer1.Size = new System.Drawing.Size(880, 557);
+            this.splitContainer1.SplitterDistance = 73;
             this.splitContainer1.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel1.Controls.Add(this.lblUserIDValue, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblUserID, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnRefresh, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(380, 60);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(880, 73);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lblUserIDValue
@@ -82,9 +84,9 @@
             this.lblUserIDValue.AutoSize = true;
             this.lblUserIDValue.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblUserIDValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserIDValue.Location = new System.Drawing.Point(193, 0);
+            this.lblUserIDValue.Location = new System.Drawing.Point(223, 0);
             this.lblUserIDValue.Name = "lblUserIDValue";
-            this.lblUserIDValue.Size = new System.Drawing.Size(65, 30);
+            this.lblUserIDValue.Size = new System.Drawing.Size(65, 36);
             this.lblUserIDValue.TabIndex = 4;
             this.lblUserIDValue.Text = "[userID]";
             this.lblUserIDValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,26 +96,12 @@
             this.lblUserID.AutoSize = true;
             this.lblUserID.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblUserID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserID.Location = new System.Drawing.Point(118, 0);
+            this.lblUserID.Location = new System.Drawing.Point(148, 0);
             this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(69, 30);
+            this.lblUserID.Size = new System.Drawing.Size(69, 36);
             this.lblUserID.TabIndex = 3;
             this.lblUserID.Text = "User ID:";
             this.lblUserID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.AutoSize = true;
-            this.btnRefresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(193, 33);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(184, 24);
-            this.btnRefresh.TabIndex = 5;
-            this.btnRefresh.Text = "REFRESH";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // dataUserLoanApplications
             // 
@@ -122,14 +110,36 @@
             this.dataUserLoanApplications.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataUserLoanApplications.Location = new System.Drawing.Point(0, 0);
             this.dataUserLoanApplications.Name = "dataUserLoanApplications";
-            this.dataUserLoanApplications.Size = new System.Drawing.Size(380, 593);
+            this.dataUserLoanApplications.Size = new System.Drawing.Size(880, 480);
             this.dataUserLoanApplications.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.btnRefresh);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 39);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(214, 31);
+            this.flowLayoutPanel1.TabIndex = 5;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AutoSize = true;
+            this.btnRefresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(3, 3);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(72, 27);
+            this.btnRefresh.TabIndex = 7;
+            this.btnRefresh.Text = "REFRESH";
+            this.btnRefresh.UseVisualStyleBackColor = true;
             // 
             // FormUserLoanApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 657);
+            this.ClientSize = new System.Drawing.Size(880, 557);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormUserLoanApplications";
@@ -143,6 +153,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataUserLoanApplications)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -153,7 +165,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblUserID;
         private System.Windows.Forms.Label lblUserIDValue;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dataUserLoanApplications;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
