@@ -46,8 +46,10 @@ namespace DataAccess
                 {
                     if (reader.Read())
                     {
+                        String userID = reader.GetString(reader.GetOrdinal("UserID"));
                         decimal basicSalary = reader.GetDecimal(reader.GetOrdinal("BasicSalary"));
-                        return new User(firstName, middleInitial, lastName, basicSalary);
+                        User loggedUser = new User(userID, firstName, middleInitial, lastName);
+                        return loggedUser;
                     }
                 }
             }

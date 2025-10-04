@@ -24,6 +24,14 @@ namespace DataAccess
             GenerateUserID();
         }
 
+        public User(String userID, String firstName, String middleInitial, String lastName)
+        {
+            this.userID = userID;
+            this.firstName = firstName;
+            this.middleInitial = middleInitial;
+            this.lastName = lastName;
+        }
+
         public String FirstName { get => firstName; set => firstName = value; }
         public String MiddleInitial { get => middleInitial; set => middleInitial = value; }
         public decimal BasicSalary { get => basicSalary; set => basicSalary = value; }
