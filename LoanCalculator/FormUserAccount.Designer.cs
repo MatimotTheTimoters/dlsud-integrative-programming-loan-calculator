@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.newLoanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewLoanApplicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newLoanMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewMyLoanMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newLoanToolStripMenuItem,
-            this.viewLoanApplicationsToolStripMenuItem});
+            this.newLoanMenuItem,
+            this.viewMyLoanMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(884, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // newLoanToolStripMenuItem
+            // newLoanMenuItem
             // 
-            this.newLoanToolStripMenuItem.Name = "newLoanToolStripMenuItem";
-            this.newLoanToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.newLoanToolStripMenuItem.Text = "New Loan";
-            this.newLoanToolStripMenuItem.Click += new System.EventHandler(this.newLoanToolStripMenuItem_Click);
+            this.newLoanMenuItem.Name = "newLoanMenuItem";
+            this.newLoanMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.newLoanMenuItem.Text = "New Loan";
+            this.newLoanMenuItem.Click += new System.EventHandler(this.newLoanMenuItem_Click);
             // 
-            // viewLoanApplicationsToolStripMenuItem
+            // viewMyLoanMenuItem
             // 
-            this.viewLoanApplicationsToolStripMenuItem.Name = "viewLoanApplicationsToolStripMenuItem";
-            this.viewLoanApplicationsToolStripMenuItem.Size = new System.Drawing.Size(142, 20);
-            this.viewLoanApplicationsToolStripMenuItem.Text = "View Loan Applications";
-            this.viewLoanApplicationsToolStripMenuItem.Click += new System.EventHandler(this.viewLoanApplicationsToolStripMenuItem_Click);
+            this.viewMyLoanMenuItem.Name = "viewMyLoanMenuItem";
+            this.viewMyLoanMenuItem.Size = new System.Drawing.Size(142, 20);
+            this.viewMyLoanMenuItem.Text = "View Loan Applications";
+            this.viewMyLoanMenuItem.Click += new System.EventHandler(this.viewMyLoanMenuItem_Click);
             // 
             // FormUserAccount
             // 
@@ -81,7 +81,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem newLoanToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewLoanApplicationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newLoanMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewMyLoanMenuItem;
     }
 }

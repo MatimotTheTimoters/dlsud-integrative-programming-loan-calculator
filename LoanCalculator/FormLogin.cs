@@ -26,7 +26,7 @@ namespace LoanCalculator
             String firstName = txtFirstName.Text.ToString();
             String middleInitial = txtMiddleInitial.Text.ToString();
             String lastName = txtLastName.Text.ToString();
-            User newUser = DataAccess.DataHelper.LoginUser(firstName, middleInitial, lastName);
+            User newUser = DataHelper.LoginUser(firstName, middleInitial, lastName);
 
             // Check if user is null
             if (newUser != null)
