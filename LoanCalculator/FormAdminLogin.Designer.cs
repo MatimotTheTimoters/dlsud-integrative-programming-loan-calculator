@@ -31,7 +31,7 @@
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtBasicSalary = new System.Windows.Forms.TextBox();
+            this.txtAdminKey = new System.Windows.Forms.TextBox();
             this.lblAdminKey = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.txtMiddleInitial = new System.Windows.Forms.TextBox();
@@ -69,7 +69,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel1.Controls.Add(this.txtBasicSalary, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtAdminKey, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.lblAdminKey, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtLastName, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblLastName, 0, 2);
@@ -90,15 +90,15 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(380, 657);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // txtBasicSalary
+            // txtAdminKey
             // 
-            this.txtBasicSalary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBasicSalary.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBasicSalary.Location = new System.Drawing.Point(98, 396);
-            this.txtBasicSalary.Multiline = true;
-            this.txtBasicSalary.Name = "txtBasicSalary";
-            this.txtBasicSalary.Size = new System.Drawing.Size(279, 125);
-            this.txtBasicSalary.TabIndex = 7;
+            this.txtAdminKey.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtAdminKey.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdminKey.Location = new System.Drawing.Point(98, 396);
+            this.txtAdminKey.Multiline = true;
+            this.txtAdminKey.Name = "txtAdminKey";
+            this.txtAdminKey.Size = new System.Drawing.Size(279, 125);
+            this.txtAdminKey.TabIndex = 7;
             // 
             // lblAdminKey
             // 
@@ -179,6 +179,7 @@
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnClear
             // 
@@ -216,7 +217,7 @@
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox txtBasicSalary;
+        private System.Windows.Forms.TextBox txtAdminKey;
         private System.Windows.Forms.Label lblAdminKey;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.TextBox txtMiddleInitial;

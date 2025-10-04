@@ -15,11 +15,7 @@ namespace DataAccess
         public static String conStr = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Matthew\Source\Repos\dlsud-integrative-programming-loan-calculator\LoanCalculator\MasterFile.mdf;Integrated Security=True";
 
         // New User
-        public static void RegisterUser(
-            String firstName, 
-            String middleInitial, 
-            String lastName, 
-            Decimal basicSalary)
+        public static void RegisterUser(String firstName, String middleInitial, String lastName, Decimal basicSalary)
         {
             using (SqlConnection con = new SqlConnection(conStr))
             {
@@ -34,7 +30,31 @@ namespace DataAccess
             }
         }
 
-        public static User LoginUser(string firstName, string middleInitial, string lastName)
+        public static User LoginUser(String firstName, String middleInitial, String lastName)
+        {
+            using (var conn = new SqlConnection(conStr))
+            using (var cmd = new SqlCommand("GetUserByFullName", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@FirstName", firstName);
+                cmd.Parameters.AddWithValue("@MiddleInitial", middleInitial);
+                cmd.Parameters.AddWithValue("@LastName", lastName);
+
+                conn.Open();
+                using (var reader = cmd.ExecuteReader(CommandBehavior.SingleRow))
+                {
+                    if (reader.Read())
+                    {
+                        decimal basicSalary = reader.GetDecimal(reader.GetOrdinal("BasicSalary"));
+                        return new User(firstName, middleInitial, lastName, basicSalary);
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        public static User AdminUserLogin(String firstName, String middleInitial, String lastName, String adminKey)
         {
             using (var conn = new SqlConnection(conStr))
             using (var cmd = new SqlCommand("GetUserByFullName", conn))

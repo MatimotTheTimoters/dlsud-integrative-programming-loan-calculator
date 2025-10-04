@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAccess;
 
 namespace LoanCalculator
 {
@@ -15,6 +16,25 @@ namespace LoanCalculator
         public FormAdminLogin()
         {
             InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            String firstName = txtFirstName.Text;
+            String middleInitial = txtMiddleInitial.Text;
+            String lastName = txtLastName.Text;
+            String adminKey = txtAdminKey.Text;
+            User newAdminUser = DataHelper.AdminUserLogin(firstName, middleInitial, lastName, adminKey);
+            if (newAdminUser != null)
+            {
+                FormAdminAccount adminAccount = new FormAdminAccount(newAdminUser);
+                adminAccount.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Invalid credentials. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
