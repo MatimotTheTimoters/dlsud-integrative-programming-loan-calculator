@@ -153,9 +153,34 @@ namespace DataAccess
         }
 
         // Admin Account
-        public static void AcceptLoan()
+        public static void AcceptLoan(int id, String userID, int monthsToPay, decimal loanAmount)
         {
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                SqlCommand acceptLoanCmd = new SqlCommand("AcceptLoan", con);
+                acceptLoanCmd.CommandType = CommandType.StoredProcedure;
+                acceptLoanCmd.Parameters.AddWithValue("@ID", id);
+                acceptLoanCmd.Parameters.AddWithValue("@UserID", userID);
+                acceptLoanCmd.Parameters.AddWithValue("@MonthsToPay", monthsToPay);
+                acceptLoanCmd.Parameters.AddWithValue("@LoanAmount", loanAmount);
+                con.Open();
+                acceptLoanCmd.ExecuteNonQuery();
+            }
+        }
 
+        public static void RejectLoan(int id, String userID, int monthsToPay, decimal loanAmount)
+        {
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                SqlCommand rejectLoanCmd = new SqlCommand("RejectLoan", con);
+                rejectLoanCmd.CommandType = CommandType.StoredProcedure;
+                rejectLoanCmd.Parameters.AddWithValue("@ID", id);
+                rejectLoanCmd.Parameters.AddWithValue("@UserID", userID);
+                rejectLoanCmd.Parameters.AddWithValue("@MonthsToPay", monthsToPay);
+                rejectLoanCmd.Parameters.AddWithValue("@LoanAmount", loanAmount);
+                con.Open();
+                rejectLoanCmd.ExecuteNonQuery();
+            }
         }
     }
 }
