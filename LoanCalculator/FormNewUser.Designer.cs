@@ -43,7 +43,7 @@
             this.adminToolStripMenuItem});
             this.menuStripNewUser.Location = new System.Drawing.Point(0, 0);
             this.menuStripNewUser.Name = "menuStripNewUser";
-            this.menuStripNewUser.Size = new System.Drawing.Size(484, 24);
+            this.menuStripNewUser.Size = new System.Drawing.Size(884, 24);
             this.menuStripNewUser.TabIndex = 1;
             this.menuStripNewUser.Text = "menuStrip1";
             // 
@@ -72,7 +72,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 761);
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.menuStripNewUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.IsMdiContainer = true;

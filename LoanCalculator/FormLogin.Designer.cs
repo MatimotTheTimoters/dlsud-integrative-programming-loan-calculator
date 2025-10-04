@@ -44,12 +44,12 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(98, 337);
+            this.txtLastName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.Location = new System.Drawing.Point(223, 281);
             this.txtLastName.Multiline = true;
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(279, 146);
+            this.txtLastName.Size = new System.Drawing.Size(654, 133);
             this.txtLastName.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -73,7 +73,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(380, 657);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(880, 557);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // lblLastName
@@ -81,21 +81,21 @@
             this.lblLastName.AutoSize = true;
             this.lblLastName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblLastName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(3, 328);
+            this.lblLastName.Location = new System.Drawing.Point(3, 278);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(89, 164);
+            this.lblLastName.Size = new System.Drawing.Size(214, 139);
             this.lblLastName.TabIndex = 4;
             this.lblLastName.Text = "Last Name:";
             this.lblLastName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtMiddleInitial
             // 
-            this.txtMiddleInitial.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMiddleInitial.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMiddleInitial.Location = new System.Drawing.Point(98, 173);
+            this.txtMiddleInitial.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtMiddleInitial.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMiddleInitial.Location = new System.Drawing.Point(223, 142);
             this.txtMiddleInitial.Multiline = true;
             this.txtMiddleInitial.Name = "txtMiddleInitial";
-            this.txtMiddleInitial.Size = new System.Drawing.Size(279, 146);
+            this.txtMiddleInitial.Size = new System.Drawing.Size(654, 133);
             this.txtMiddleInitial.TabIndex = 3;
             // 
             // lblMiddleInitial
@@ -103,9 +103,9 @@
             this.lblMiddleInitial.AutoSize = true;
             this.lblMiddleInitial.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMiddleInitial.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMiddleInitial.Location = new System.Drawing.Point(3, 164);
+            this.lblMiddleInitial.Location = new System.Drawing.Point(3, 139);
             this.lblMiddleInitial.Name = "lblMiddleInitial";
-            this.lblMiddleInitial.Size = new System.Drawing.Size(89, 164);
+            this.lblMiddleInitial.Size = new System.Drawing.Size(214, 139);
             this.lblMiddleInitial.TabIndex = 2;
             this.lblMiddleInitial.Text = "Middle Initial:";
             this.lblMiddleInitial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -117,19 +117,19 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 164);
+            this.label1.Size = new System.Drawing.Size(214, 139);
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(98, 9);
+            this.txtFirstName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.Location = new System.Drawing.Point(223, 3);
             this.txtFirstName.Multiline = true;
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(279, 146);
+            this.txtFirstName.Size = new System.Drawing.Size(654, 133);
             this.txtFirstName.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -137,9 +137,9 @@
             this.flowLayoutPanel1.Controls.Add(this.btnLogin);
             this.flowLayoutPanel1.Controls.Add(this.btnClear);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(98, 495);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(223, 420);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(279, 159);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(654, 134);
             this.flowLayoutPanel1.TabIndex = 8;
             // 
             // btnLogin
@@ -171,7 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 657);
+            this.ClientSize = new System.Drawing.Size(880, 557);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormLogin";
