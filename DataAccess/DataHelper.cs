@@ -114,7 +114,6 @@ namespace DataAccess
 
         public static void NewLoan(
             String userID, 
-            decimal basicSalary, 
             int monthsToPay, 
             decimal loanAmount, 
             decimal interestRate, 
@@ -128,7 +127,6 @@ namespace DataAccess
                 SqlCommand newLoanCmd = new SqlCommand("AddNewLoan", con);
                 newLoanCmd.CommandType = CommandType.StoredProcedure;
                 newLoanCmd.Parameters.AddWithValue("@UserID", userID);
-                newLoanCmd.Parameters.AddWithValue("@BasicSalary", basicSalary);
                 newLoanCmd.Parameters.AddWithValue("@MonthsToPay", monthsToPay);
                 newLoanCmd.Parameters.AddWithValue("@LoanAmount", loanAmount);
                 newLoanCmd.Parameters.AddWithValue("@InterestRate", interestRate);

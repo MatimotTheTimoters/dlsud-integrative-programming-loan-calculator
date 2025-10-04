@@ -49,7 +49,7 @@ namespace LoanCalculator
             decimal loanAmount, interest, serviceCharge, takeHomeLoan, monthlyAmortization;
 
             // Calculate
-            DataAccess.DataHelper.CalculateLoan(
+            DataHelper.CalculateLoan(
                 basicSalary, 
                 monthsToPay, 
                 out loanAmount, 
@@ -84,7 +84,6 @@ namespace LoanCalculator
         private void btnApply_Click(object sender, EventArgs e)
         {
             String userID = currentUser.UserID;
-            decimal basicSalary = currentUser.BasicSalary;
             int monthsToPay = Convert.ToInt32(numMonthsToPay.Value);
             decimal loanAmount = Convert.ToDecimal(lblLoanAmountValue.Text);
             decimal interestRate = Convert.ToDecimal(lblInterestRateValue.Text);
@@ -93,9 +92,8 @@ namespace LoanCalculator
             decimal takeHomeLoan = Convert.ToDecimal(lblTakeHomeLoanValue.Text);
             decimal monthlyAmortization = Convert.ToDecimal(lblMonthlyAmortizationValue.Text);
 
-            DataAccess.DataHelper.NewLoan(
-                userID, 
-                basicSalary, 
+            DataHelper.NewLoan(
+                userID,
                 monthsToPay, 
                 loanAmount, 
                 interestRate, 
