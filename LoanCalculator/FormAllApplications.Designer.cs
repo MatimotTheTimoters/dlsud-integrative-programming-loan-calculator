@@ -120,28 +120,34 @@
             // 
             this.btnAccept.AutoSize = true;
             this.btnAccept.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAccept.BackColor = System.Drawing.Color.Green;
             this.btnAccept.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAccept.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAccept.ForeColor = System.Drawing.Color.Transparent;
             this.btnAccept.Location = new System.Drawing.Point(800, 3);
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(71, 29);
             this.btnAccept.TabIndex = 8;
             this.btnAccept.Text = "ACCEPT";
-            this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.UseVisualStyleBackColor = false;
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // btnReject
             // 
             this.btnReject.AutoSize = true;
             this.btnReject.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnReject.BackColor = System.Drawing.Color.IndianRed;
             this.btnReject.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnReject.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReject.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnReject.ForeColor = System.Drawing.Color.Transparent;
             this.btnReject.Location = new System.Drawing.Point(729, 3);
             this.btnReject.Name = "btnReject";
             this.btnReject.Size = new System.Drawing.Size(65, 29);
             this.btnReject.TabIndex = 9;
             this.btnReject.Text = "REJECT";
-            this.btnReject.UseVisualStyleBackColor = true;
+            this.btnReject.UseVisualStyleBackColor = false;
             this.btnReject.Click += new System.EventHandler(this.btnReject_Click);
             // 
             // btnRefresh
@@ -149,6 +155,7 @@
             this.btnRefresh.AutoSize = true;
             this.btnRefresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnRefresh.Location = new System.Drawing.Point(646, 3);
             this.btnRefresh.Name = "btnRefresh";
