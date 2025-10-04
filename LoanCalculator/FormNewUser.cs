@@ -29,13 +29,7 @@ namespace LoanCalculator
             ChildFormLoader.ChildFormLoaderHelper.LoadNewUserChildForm(childForm);
         }
 
-        private void registerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormAdminRegistration childForm = new FormAdminRegistration();
-            ChildFormLoader.ChildFormLoaderHelper.LoadNewUserChildForm(childForm);
-        }
-
-        private void loginToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormAdminLogin childForm = new FormAdminLogin();
             ChildFormLoader.ChildFormLoaderHelper.LoadNewUserChildForm(childForm);
