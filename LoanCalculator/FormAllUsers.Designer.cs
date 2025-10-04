@@ -47,7 +47,7 @@
             this.dataAllUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataAllUsers.Location = new System.Drawing.Point(0, 0);
             this.dataAllUsers.Name = "dataAllUsers";
-            this.dataAllUsers.Size = new System.Drawing.Size(380, 620);
+            this.dataAllUsers.Size = new System.Drawing.Size(880, 526);
             this.dataAllUsers.TabIndex = 0;
             // 
             // splitContainer1
@@ -64,8 +64,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataAllUsers);
-            this.splitContainer1.Size = new System.Drawing.Size(380, 657);
-            this.splitContainer1.SplitterDistance = 33;
+            this.splitContainer1.Size = new System.Drawing.Size(880, 557);
+            this.splitContainer1.SplitterDistance = 27;
             this.splitContainer1.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -74,7 +74,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(380, 33);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(880, 27);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnRefresh
@@ -95,7 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 657);
+            this.ClientSize = new System.Drawing.Size(880, 557);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormAllUsers";

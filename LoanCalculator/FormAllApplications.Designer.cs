@@ -54,7 +54,7 @@
             this.dataAllApplications.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataAllApplications.Location = new System.Drawing.Point(0, 0);
             this.dataAllApplications.Name = "dataAllApplications";
-            this.dataAllApplications.Size = new System.Drawing.Size(380, 474);
+            this.dataAllApplications.Size = new System.Drawing.Size(880, 402);
             this.dataAllApplications.TabIndex = 0;
             this.dataAllApplications.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataAllApplications_CellClick);
             // 
@@ -72,8 +72,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataAllApplications);
-            this.splitContainer1.Size = new System.Drawing.Size(380, 657);
-            this.splitContainer1.SplitterDistance = 179;
+            this.splitContainer1.Size = new System.Drawing.Size(880, 557);
+            this.splitContainer1.SplitterDistance = 151;
             this.splitContainer1.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -90,7 +90,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(380, 179);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(880, 151);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dataAllLoanSelectedRow
@@ -98,9 +98,9 @@
             this.dataAllLoanSelectedRow.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataAllLoanSelectedRow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataAllLoanSelectedRow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataAllLoanSelectedRow.Location = new System.Drawing.Point(117, 3);
+            this.dataAllLoanSelectedRow.Location = new System.Drawing.Point(267, 3);
             this.dataAllLoanSelectedRow.Name = "dataAllLoanSelectedRow";
-            this.dataAllLoanSelectedRow.Size = new System.Drawing.Size(260, 128);
+            this.dataAllLoanSelectedRow.Size = new System.Drawing.Size(610, 107);
             this.dataAllLoanSelectedRow.TabIndex = 10;
             // 
             // flowLayoutPanel1
@@ -111,9 +111,9 @@
             this.flowLayoutPanel1.Controls.Add(this.btnRefresh);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 137);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 116);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(374, 39);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(874, 32);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // btnAccept
@@ -122,7 +122,7 @@
             this.btnAccept.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAccept.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnAccept.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnAccept.Location = new System.Drawing.Point(300, 3);
+            this.btnAccept.Location = new System.Drawing.Point(800, 3);
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(71, 29);
             this.btnAccept.TabIndex = 8;
@@ -136,7 +136,7 @@
             this.btnReject.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnReject.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnReject.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnReject.Location = new System.Drawing.Point(229, 3);
+            this.btnReject.Location = new System.Drawing.Point(729, 3);
             this.btnReject.Name = "btnReject";
             this.btnReject.Size = new System.Drawing.Size(65, 29);
             this.btnReject.TabIndex = 9;
@@ -150,7 +150,7 @@
             this.btnRefresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnRefresh.Location = new System.Drawing.Point(146, 3);
+            this.btnRefresh.Location = new System.Drawing.Point(646, 3);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(77, 29);
             this.btnRefresh.TabIndex = 10;
@@ -163,9 +163,9 @@
             this.lblSelectedLoanApplication.AutoSize = true;
             this.lblSelectedLoanApplication.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblSelectedLoanApplication.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedLoanApplication.Location = new System.Drawing.Point(8, 0);
+            this.lblSelectedLoanApplication.Location = new System.Drawing.Point(48, 0);
             this.lblSelectedLoanApplication.Name = "lblSelectedLoanApplication";
-            this.lblSelectedLoanApplication.Size = new System.Drawing.Size(103, 134);
+            this.lblSelectedLoanApplication.Size = new System.Drawing.Size(213, 113);
             this.lblSelectedLoanApplication.TabIndex = 7;
             this.lblSelectedLoanApplication.Text = "Selected Loan Application:";
             this.lblSelectedLoanApplication.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -174,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 657);
+            this.ClientSize = new System.Drawing.Size(880, 557);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormAllApplications";

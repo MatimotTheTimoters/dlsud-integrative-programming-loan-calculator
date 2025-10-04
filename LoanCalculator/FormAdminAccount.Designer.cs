@@ -41,7 +41,7 @@
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(484, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(884, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -57,14 +57,14 @@
             // usersToolStripMenuItem
             // 
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.usersToolStripMenuItem.Text = "Users";
             this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
             // 
             // loanApplicationsToolStripMenuItem
             // 
             this.loanApplicationsToolStripMenuItem.Name = "loanApplicationsToolStripMenuItem";
-            this.loanApplicationsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loanApplicationsToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.loanApplicationsToolStripMenuItem.Text = "Loan Applications";
             this.loanApplicationsToolStripMenuItem.Click += new System.EventHandler(this.loanApplicationsToolStripMenuItem_Click);
             // 
@@ -72,7 +72,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 761);
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.IsMdiContainer = true;
