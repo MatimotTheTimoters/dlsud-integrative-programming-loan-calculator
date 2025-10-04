@@ -13,10 +13,15 @@ namespace LoanCalculator
 {
     public partial class FormAllApplications: Form
     {
-        public FormAllApplications()
+        AdminUser currentAdminUser;
+
+        public FormAllApplications(AdminUser registeredAdminUser)
         {
             InitializeComponent();
+            currentAdminUser = registeredAdminUser;
+            lblAdminUserIDValue.Text = currentAdminUser.AdminUserID;
         }
+
         private void dataAllApplications_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Ignore header row clicks
