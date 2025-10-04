@@ -153,6 +153,9 @@ namespace DataAccess
         }
 
         // Admin Account
-        
+        public static void AcceptLoan()
+        {
+
+        }
     }
 }
